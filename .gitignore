@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+venv310/
+.env
+
+# Generated vector store
+chroma_db/
+
+# Domain documents (official publications — not redistributed)
+data/*.pdf
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
