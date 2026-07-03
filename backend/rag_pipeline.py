@@ -28,6 +28,8 @@ Ako odgovor nije eksplicitno u kontekstu, izvedi zaključak na temelju dostupnih
 Ne koristiti opće znanje izvan priloženog konteksta.
 Ne odgovaraj na pitanja koja nisu vezana uz obnovljive izvore energije, energetske preglede ili povezanu regulativu.
 
+Ako je dohvaćeni izvor u kontekstu označen kao [NEAKTIVAN / rok istekao], jasno upozori korisnika da taj natječaj ili dokument više nije na snazi te da navedene uvjete i rokove treba provjeriti u aktualnoj verziji. Svejedno smiješ odgovoriti na temelju njegova sadržaja (npr. opisati kakvi su uvjeti bili), ali uz to upozorenje.
+
 Uvijek odgovaraj na hrvatskom jeziku, bez obzira na jezik upita.
 Odgovaraj jasno i stručno. Ako odgovor uključuje više koraka ili uvjeta, navedi ih kao numerirani popis.
 
@@ -42,21 +44,35 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{question}")
 ])
 
+GENERATOR_MODEL = "gemma3:4b"
+
 # LLM model
 llm = ChatOllama(
-    model="gemma3:4b",
+    model=GENERATOR_MODEL,
     temperature=0.2,
     keep_alive="10m",
-    num_predict=512,
+    # num_predict=512,
 )
+
+# Broj stranice za citat: tiskana (otisnuta u dokumentu) stranica, koju indexer
+# upisuje u metapodatke. Fallback na PyPDF 'page' (PDF indeks) samo ako u bazi
+# ostane stari chunk od prije re-indeksiranja.
+def stranica_za_citat(doc):
+    s = doc.metadata.get("tiskana_stranica")
+    if s is None:
+        s = doc.metadata.get("page", "?")
+    return s
+
 
 # Pomoćna funkcija za formatiranje dohvaćenih odlomaka
 def format_context(docs):
     dijelovi = []
     for doc in docs:
         naziv = doc.metadata.get("naziv_dokumenta", "Nepoznat dokument")
-        stranica = doc.metadata.get("page", "?")
-        dijelovi.append(f"[{naziv}, str. {stranica}]\n{doc.page_content}")
+        stranica = stranica_za_citat(doc)
+        status = (doc.metadata.get("status_dokumenta") or "")
+        oznaka = " [NEAKTIVAN / rok istekao]" if status.lower().startswith("neaktiv") else ""
+        dijelovi.append(f"[{naziv}, str. {stranica}{oznaka}]\n{doc.page_content}")
     return "\n\n---\n\n".join(dijelovi)
 
 # Glavna funkcija — retriever se poziva JEDNOM, rezultat se dijeli između
@@ -64,18 +80,18 @@ def format_context(docs):
 def get_answer_with_sources(question: str) -> dict:
     # Jedan retrieval poziv
     docs = retriever.invoke(question)
- 
+
     # Formatiraj kontekst i generiraj odgovor
     context = format_context(docs)
     chain = prompt | llm | StrOutputParser()
     answer = chain.invoke({"context": context, "question": question})
- 
+
     # Pripremi izvore za prikaz (deduplicirani)
     sources = []
     seen = set()
     for doc in docs:
         naziv = doc.metadata.get("naziv_dokumenta", "Nepoznat")
-        stranica = doc.metadata.get("page", "?")
+        stranica = stranica_za_citat(doc)
         key = f"{naziv}_{stranica}"
         if key not in seen:
             seen.add(key)
@@ -84,12 +100,12 @@ def get_answer_with_sources(question: str) -> dict:
                 "stranica": stranica,
                 "kategorija": doc.metadata.get("kategorija", ""),
             })
-    
+
     # Sirovi tekst dohvaćenih odlomaka — POTREBNO za RAGAS evaluaciju
     # (Faithfulness, Context Precision i Context Recall trebaju stvarni
     # tekst koji je model vidio, ne samo metapodatke o izvoru)
     retrieved_chunks = [doc.page_content for doc in docs]
- 
+
     return {
         "answer": answer,
         "sources": sources,
