@@ -3,7 +3,6 @@ from langchain_ollama import OllamaEmbeddings, ChatOllama
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
 
 BASE_DIR = Path(__file__).parent.parent
 CHROMA_DIR = BASE_DIR / "chroma_db"
@@ -85,8 +84,14 @@ def get_answer_with_sources(question: str) -> dict:
                 "stranica": stranica,
                 "kategorija": doc.metadata.get("kategorija", ""),
             })
+    
+    # Sirovi tekst dohvaćenih odlomaka — POTREBNO za RAGAS evaluaciju
+    # (Faithfulness, Context Precision i Context Recall trebaju stvarni
+    # tekst koji je model vidio, ne samo metapodatke o izvoru)
+    retrieved_chunks = [doc.page_content for doc in docs]
  
     return {
         "answer": answer,
-        "sources": sources
+        "sources": sources,
+        "retrieved_chunks": retrieved_chunks
     }
