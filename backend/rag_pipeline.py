@@ -15,7 +15,7 @@ vectorstore = Chroma(
     embedding_function=embeddings
 )
 
-# Retriever — dohvaća top-4 najsličnija odlomka
+# Retriever — dohvaća top-3 najsličnija odlomka
 retriever = vectorstore.as_retriever(
     search_type="similarity",
     search_kwargs={"k": 3}
@@ -60,26 +60,18 @@ def format_context(docs):
         dijelovi.append(f"[{naziv}, str. {stranica}]\n{doc.page_content}")
     return "\n\n---\n\n".join(dijelovi)
 
-# Cjelovit RAG pipeline
-rag_chain = (
-    {
-        "context": retriever | format_context,
-        "question": RunnablePassthrough()
-    }
-    | prompt
-    | llm
-    | StrOutputParser()
-)
-
-# Funkcija za dohvat izvora uz odgovor
+# Glavna funkcija — retriever se poziva JEDNOM, rezultat se dijeli između
+# formatiranja konteksta i pripreme izvora (nema duplog pretraživanja)
 def get_answer_with_sources(question: str) -> dict:
-    # Dohvati relevantne odlomke
+    # Jedan retrieval poziv
     docs = retriever.invoke(question)
-    
-    # Generiraj odgovor
-    answer = rag_chain.invoke(question)
-    
-    # Pripremi izvore za prikaz
+ 
+    # Formatiraj kontekst i generiraj odgovor
+    context = format_context(docs)
+    chain = prompt | llm | StrOutputParser()
+    answer = chain.invoke({"context": context, "question": question})
+ 
+    # Pripremi izvore za prikaz (deduplicirani)
     sources = []
     seen = set()
     for doc in docs:
@@ -93,9 +85,8 @@ def get_answer_with_sources(question: str) -> dict:
                 "stranica": stranica,
                 "kategorija": doc.metadata.get("kategorija", ""),
             })
-    
+ 
     return {
         "answer": answer,
         "sources": sources
     }
-
