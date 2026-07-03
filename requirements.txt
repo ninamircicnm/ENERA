@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-ollama
+chromadb
+langchain-chroma
+fastapi
+uvicorn
+streamlit
+ragas
+pypdf
+openpyxl
