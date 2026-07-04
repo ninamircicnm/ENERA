@@ -1,0 +1,587 @@
+[
+  {
+    "id": "ZOI-01",
+    "question": "Koji je nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine?",
+    "ground_truth": "Nacionalni cilj korištenja energije iz obnovljivih izvora energije iznosi najmanje 42,5 % obnovljivih izvora energije u konačnoj brutopotrošnji energije do 2030. godine u Republici Hrvatskoj.",
+    "reference_context": "Korištenjem energije iz obnovljivih izvora energije ostvaruju se interesi Republike Hrvatske u području energetike, osobito u smislu ostvarenja nacionalnog cilja korištenja energije iz obnovljivih izvora energije od najmanje 42,5 % obnovljivih izvora energije u konačnoj brutopotrošnji energije do 2030. godine u Republici Hrvatskoj. (članak 7. stavak 1.)",
+    "document": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+    "category": "Zakonodavstvo",
+    "generated_answer": "Nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine, prema Integriranom nacionalnom energetskom i klimatskom planu (NECP), je postizanje zacrtanog udjela obnovljive energije u konačnoj brutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije. Konkretni brojčan utvrđen je u NECP, ali se ne navodi izvan ovog konteksta.\n\nIzvor: Integrirani nacionalni energetski i klimatski plan za Republiku Hrvatsku (NECP), str. 9",
+    "retrieved_contexts": [
+      "Republike Hrvatske u području energetike, utvrđeni Strategijom energetskog razvoja Republike Hrvatske do 2030. s\npogledom na 2050. godinu (»Narodne novine«, br. 25/20.), Integriranim nacionalnim energetskim i klimatskim planom\nza Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (u daljnjem tekstu: NECP), propisima kojima se uređuju\npojedina tržišta energije, kao i propisima kojima se uređuje obavljanje energetskih djelatnosti, u smislu:\n1. dekarbonizacije energetskog sektora",
+      "NACIONALNI CILJ KORIŠTENJA ENERGIJE IZ OBNOVLJIVIH IZVORA ENERGIJE, IZVJEŠĆE O \nNAPRETKU PRI POTICANJU I UPORABI ENERGIJE IZ OBNOVLJIVIH IZVORA\nČlanak 6.\nIntegrirani nacionalni energetski i klimatski plan za Republiku Hrvatsku\n(1) Integrirani nacionalni energetski i klimatski plan za Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (u\ndaljnjem tekstu: NECP) je akt strateškog planiranja iz članka 3. Uredbe (EU) 2018/1999, a u smislu ovoga Zakona\ntemeljni planski dokument energetske i klimatske politike Republike Hrvatske koji se odnosi na određivanje\nindikativne putanje za povećanje obnovljive energije i postizanje zacrtanog udjela obnovljive energije u konačnoj\nbrutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije.",
+      "NACIONALNI CILJ KORIŠTENJA ENERGIJE IZ OBNOVLJIVIH IZVORA ENERGIJE, IZVJEŠĆE O \nNAPRETKU PRI POTICANJU I UPORABI ENERGIJE IZ OBNOVLJIVIH IZVORA\nČlanak 6.\nIntegrirani nacionalni energetski i klimatski plan za Republiku Hrvatsku\n(1) Integrirani nacionalni energetski i klimatski plan za Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (u\ndaljnjem tekstu: NECP) je akt strateškog planiranja iz članka 3. Uredbe (EU) 2018/1999, a u smislu ovoga Zakona\ntemeljni planski dokument energetske i klimatske politike Republike Hrvatske koji se odnosi na određivanje\nindikativne putanje za povećanje obnovljive energije i postizanje zacrtanog udjela obnovljive energije u konačnoj\nbrutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 2,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 9,
+        "kategorija": "Pravni okvir i postupci"
+      }
+    ]
+  },
+  {
+    "id": "ZOI-02",
+    "question": "Što je tržišna premija i kako se izračunava za postrojenja na obnovljive izvore energije?",
+    "ground_truth": "Tržišna premija (TPi) je poticaj koji operator tržišta energije isplaćuje povlaštenom proizvođaču za neto isporučenu električnu energiju. Računa se kao razlika između referentne vrijednosti električne energije (RV), utvrđene ugovorom o tržišnoj premiji, i referentne tržišne cijene električne energije (TCi): TPi = RV − TCi.",
+    "reference_context": "Članak 21. definira sustav poticanja tržišnom premijom, a članak 23. stavak 2. propisuje formulu TPi = RV − TCi, gdje je RV referentna vrijednost električne energije utvrđena ugovorom o tržišnoj premiji, a TCi referentna tržišna cijena električne energije u obračunskom razdoblju. Zajamčena otkupna cijena zaseban je mehanizam uređen člancima 24–26.",
+    "document": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+    "category": "Zakonodavstvo",
+    "generated_answer": "Tržišna premija je novčani iznos koji Hrvatska regulatorna agencija za energetiku (HROTE) isplaćuje povlaštenom proizvođaču električne energije. Ona predstavlja razliku između referentne vrijednosti električne energije koju je nositelj projekta ostvario na javnom natječaju i referentne tržišne cijene po jedinici proizvodnje.\n\nUgovor o tržišnoj premiji daje korisniku pravo na plaćanje tržišnepremije koja se izračunava na sljedeći način:\n\n1.  Referentna vrijednost električne energije: Ovo je cijena koju je nositelj projekta ostvario na javnom natječaju za svoj projekt.\n2.  Referentna tržišna cijena: To je tržišna cijena električne energije u trenutku proizvodnje.\n\nIzvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 155; Ugovor o tržišnoj premiji (instrument potpore koji daje korisniku pravo na plaćanje tržišnepremije koja je jednaka razlici između referentne vrijednosti električne energije i referentne tržišne cijene).\nIzvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 94",
+    "retrieved_contexts": [
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n155 \nsvoje tržišne prihode.  \nU tu svrhu, a uzimajući u obzir neposredne programe zaštite cijena, potpora se daje u obliku \ntržišne premije, koja bi, među ostalim, mogla biti promjenjiva ili fiksna, uz izuzetak za mala \npostrojenja i demonstracijske projekte. \nUgovor o tržišnoj premiji je instrument potpore koji daje korisniku pravo na plaćanje tržišne \npremije koja je jednaka razlici između referentne vrijednosti električne energije (koju je nositelj \nprojekata za svoj projekt ostvario na javnom natječaju) i referentne tržišne cijene, po  jedinici \nproizvodnje. Tržišna premija predstavlja novčani iznos koji HROTE isplaćuje povlaštenom",
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n94 \npotiče tržišnom premijom  dok kod ZOC-a HROTE otkupljuje energiju od proizvođača.  Sam \nugovor se potpisuje nakon uspješnog sudjelovanja na javnom natječaju (za ZOC ili TP) prije \nnego je započela gradnja postrojenja. Uz Ugovor o tržišnoj premiji proizvođač mora sklopiti \ni Ugovor o otkupu s otkupljivačem električne energije, a nakon izgradnje postrojenja i sklopiti \nUgovor o sudjelovanju na tržištu električne energije s HROTE-om. \nStatus povlaštenog proizvođača električne energije stječe se: \n• rješenjem HERA-e na temelju zahtjeva za pojedino proizvodno postrojenje ili \n• u slu čaju proizvodnje elektri čne energije u proizvodnim postrojenjima koje su",
+      "snazi proizvodnog postrojenja, kao i način za ostvarivanje prava na poticanje u slučaju kada se otpad koristi kao\nsirovina u proizvodnom postrojenju povlaštenog proizvođača električne energije sukladno redu prvenstva\ngospodarenja otpadom u skladu sa zakonom kojim je uređeno održivo gospodarenje otpadom.\n6. Uredba o poticanju proizvodnje električne energije iz obnovljivih izvora energije i visokoučinkovitih kogeneracija"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 155,
+        "kategorija": "Financiranje i potpore"
+      },
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 94,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 26,
+        "kategorija": "Financiranje i potpore"
+      }
+    ]
+  },
+  {
+    "id": "ZOI-03",
+    "question": "Koliko najdulje smije trajati upravni postupak izdavanja dozvola za izgradnju postrojenja OIE pred prvostupanjskim javnopravnim tijelom?",
+    "ground_truth": "Upravni postupak izdavanja dozvola za proizvodna postrojenja iz obnovljivih izvora ne smije trajati dulje od dvije godine pred prvostupanjskim javnopravnim tijelom (članak 29. stavak 11.). Za postrojenja kapaciteta električne energije ispod 150 kW rok je jedna godina (članak 29. stavak 12.). U opravdanim slučajevima izvanrednih okolnosti ili više sile navedeni se rokovi mogu produljiti za najviše jednu godinu.",
+    "reference_context": "Članci 29–31 uređuju organizaciju i rokove postupaka izdavanja dozvola. Članak 29. stavak 11. propisuje najdulji rok od dvije godine za prvostupanjski postupak, stavak 12. rok od jedne godine za postrojenja ispod 150 kW, a stavci 11., 12. i 14. mogućnost produljenja za najviše jednu godinu u izvanrednim okolnostima.",
+    "document": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+    "category": "Zakonodavstvo",
+    "generated_answer": "Upravni postupak pred prvostupanjskim javnopravnim tijelima za izdavanje dozvole za izgradnju proizvodnog postrojenja iz obnovljivih izvora energije može trajati najduže godinu dana, uz mogućnost produljenja još jedne godine. Rokovi se ne račune zbog trajanja postupaka pred sudom ili drugim pravnim lijekovima.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija], str. 11; [Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji], str. 33",
+    "retrieved_contexts": [
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n11 \n3 Upravni postupak \nUpravni postupak je postupak kojim javnopravna tijela (tijela dr žavne uprave, druga dr žavna \ntijela, tijela jedinica lokalne i podru čne (regionalne) samouprave i pravne osobe koje imaju \njavne ovlasti), na zahtjev stranke ili po službenoj dužnosti rješavaju pitanja iz svoje nadležnosti.  \nOpći i temeljni zakon koji uređuje postupanje javnopravnih tijela u upravnim stvarima je Zakon \no općem upravnom postupku1 (ZUP). Upravna stvar je svaka stvar u kojoj javnopravno tijelo \nu upravnom postupku rje šava o pravima, obvezama ili pravnim interesima fizi čke ili pravne \nosobe ili drugih stranaka neposredno primjenjujući zakone, druge propise i op će akte kojima",
+      "protiv koje se vodi postupak ili koja radi za štite svojih prava ili pravnih interesa ima pravo \nsudjelovati u postupku. Stranka može biti i tijelo državne uprave te drugo državno tijelo, tijelo \njedinice lokalne ili podru čne (regionalne) samouprave ili drugo javnopravno tijelo koje nema \npravnu osobnost te njihova podru čna jedinica, odnosno podru žnica ili skupina osoba \npovezanih zajedničkim interesom, ako mo že biti no sitelj prava, odnosno obveza o kojima se \nrješava. \nUpravni postupak pokreće se na zahtjev stranke ili po službenoj dužnosti. Kad se postupak \npokreće na zahtjev stranke, postupak se smatra pokrenutim u trenutku predaje urednog \nzahtjeva stranke javnopravnome tijelu. Kad se postupak pokre će po slu žbenoj du žnosti,",
+      "proizvodnog postrojenja, te se razdoblje od jedne godine može produljiti za najviše jednu godinu.\n(15) U rokove iz stavaka 11., 12. i 14. ovoga članka ne računa se: trajanje postupka povodom žalbi pred\ndrugostupanjskim javnopravnim tijelom i pravnim osobama s javnopravnim ovlastima, trajanje sudskih postupaka\npred nadležnim sudom, trajanje postupaka povodom redovnih i izvanrednih pravnih lijekova i trajanje drugih\npostupaka pred sudom kao i trajanja alternativnih načina rješavanja sporova, te se ti rokovi produljuju vremenom\ntrajanja takvih postupaka."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 11,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 33,
+        "kategorija": "Pravni okvir i postupci"
+      }
+    ]
+  },
+  {
+    "id": "ZOI-04",
+    "question": "Po kojoj su reguliranoj otkupnoj cijeni opskrbljivači električne energije dužni preuzeti udio neto isporučene električne energije povlaštenih proizvođača?",
+    "ground_truth": "Opskrbljivači električne energije dužni su preuzeti udio, izražen u postotku, u neto isporučenoj električnoj energiji povlaštenih proizvođača, uključivo pravo na jamstvo podrijetla, po reguliranoj otkupnoj cijeni koja iznosi 0,055744 EUR/kWh (članak 46. stavak 1.).",
+    "reference_context": "Članak 46. stavak 1. propisuje obvezu opskrbljivača da preuzmu udio u neto isporučenoj električnoj energiji povlaštenih proizvođača po reguliranoj otkupnoj cijeni od 0,055744 EUR/kWh. Članci 43–49 uređuju širi mehanizam prikupljanja i raspodjele sredstava za isplatu poticaja.",
+    "document": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+    "category": "Zakonodavstvo",
+    "generated_answer": "U kontekstu priloženog dokumenta nema informacija o reguliranim otkupnim cijenama po kojima su opskrbljivači električne energije dužni preuzeti udio neto isporučene električne energije povlaštenih proizvođača. Navodi se samo da je \"neto isporučena električna energija\" razlika između ukupno isporučene i ukupno preuzete električne energije, utvrđena u obračunskim mjernim intervalima.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljivih izvora energije - Električna energija], str. 21 (odnosno, Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 5)\n",
+    "retrieved_contexts": [
+      "ugovora o opskrbi električnom energijom s svojim opskrbljivačem.  \nU slučaju izgradnje elektrane namijenjene za prodaju električne energije provode se postupci \nvezani za priključenje na mrežu.  \nSlijede postupci za ishođenje uporabne dozvole i završetak građenja. \nU slu čaju da je elektrana izgra đena isklju čivo u svrhu proizvodnje elektri čne energije i \nsudjelovanja na tržištu električne energije, može biti potrebno od HERA-e ishoditi dozvolu za \nobavljanje energetske djelatnosti  proizvodnje električne energije , nakon čega formalno \nzapočinje stalna proizvodnja. \n7.2 Troškovi i naknade \n7.2.1 Neintegrirane sunčane elektrane \nNaknade vezane uz izdavanje energetskog odobrenja navedene su u poglavlju 5.2.3.2.",
+      "korištenje proizvedene energije u razdobljima povećane proizvodnje, moguće je koristiti \nsustave za skladištenje električne energije. Pomoću njih se višak proizvedene električne \nenergije može pohraniti te isporučiti u elektroenergetsku mrežu u drugome vremenskome \ntrenutku. S druge strane, moguće je i višak električne energije iz mreže pohraniti te iskoristiti \nu trenucima kada proizvodnja iz varijabilnih obnovljivih izvora nije dovoljna.  \nStoga je ZOTEE je uveo pojam skladište energije  kao postrojenje u kojem se električna \nenergija skladišti pretvorbom u neki drugi oblik energije. Skladištenje energije je, u kontekstu \nelektroenergetskog sustava, odgađanje konačne uporabe električne energije do trenutka",
+      "30. neto isporučena električna energija je razlika ukupno isporučene električne energije i ukupno preuzete električne\nenergije proizvodnog postrojenja ili proizvodne jedinice, utvrđena u svakom obračunskom mjernom intervalu, za sva\nobračunska mjerna mjesta zajedno\n31. nositelj projekta je fizička ili pravna osoba koja na temelju energetskog odobrenja određenog propisom kojim se\nregulira tržište električne energije planira graditi i/ili gradi proizvodno postrojenje i/ili proizvodnu jedinicu i/ili vrši\nobnovu kapaciteta, a koja je upisana u Registar obnovljivih izvora energije i kogeneracije te povlaštenih proizvođača"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 118,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 21,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 5,
+        "kategorija": "Pravni okvir i postupci"
+      }
+    ]
+  },
+  {
+    "id": "PRI-01",
+    "question": "Koji su ključni dionici u postupku ishođenja dozvola za izgradnju postrojenja za proizvodnju električne energije iz obnovljivih izvora?",
+    "ground_truth": "U postupcima ishođenja dozvola sudjeluju dionici na državnoj te lokalnoj i područnoj (regionalnoj) razini. Na državnoj razini to su MINGO, MZOZT, MPGI, MPS, HERA, HROTE, HOPS, HEP ODS, AZU, Hrvatske vode i Hrvatske šume. Jedinice lokalne i područne (regionalne) samouprave izdaju lokacijske i građevinske dozvole, a sudjeluju i područni uredi za katastar i zemljišnoknjižni odjeli. Uz njih sudjeluju ovlašteni članovi strukovnih komora (građevinarstva, arhitekture, elektrotehnike, geodezije, strojarstva). Prema Zakonu o gradnji ključni sudionici u gradnji su investitor, projektant, izvođač, nadzorni inženjer i revident.",
+    "reference_context": "Na državnoj razini to su tijela državne uprave, druga državna tijela, agencije, operatori i druga trgovačka društva u državnom vlasništvu: Ministarstvo gospodarstva (MINGO), Ministarstvo zaštite okoliša i zelene tranzicije (MZOZT), Ministarstvo prostornoga uređenja, graditeljstva i državne imovine (MPGI), Ministarstvo poljoprivrede (MPS), HERA, HROTE, HOPS, HEP ODS, AZU, Hrvatske vode i Hrvatske šume. Jedinice lokalne i područne (regionalne) samouprave izdaju lokacijske i građevinske dozvole. Prema ZOG-u ključni sudionici u gradnji su: investitor, projektant, izvođač, nadzorni inženjer i revident.",
+    "document": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije",
+    "category": "Procedure i dozvole",
+    "generated_answer": "Na temelju priloženog konteksta, ključni dionici u postupku ishođenja dozvole za izgradnju proizvodnog postrojenja iz obnovljivih izvora su:\n\n1.  **HERA:** (Nije definirana u kontekstu, pretpostavlja se da je to regulatorna agencija) – Odgovorna za davanje rješenja o povlaštenom proizvođaču električne energije na temelju zahtjeva.\n2.  **ZOIEVUK:** (Nije definiran u kontekstu, pretpostavlja se da je to tijelo koje definiše kriterije za ocjenjivanje potpora) – Uključuje se u definiranje uvjeta za male postrojenja i njihovo povezivanje s unutarnjim tržištem.\n3.  **Proizvođač električne energije:** Osoba ili pravna entitet koja želi izgraditi proizvodno postrojenje iz obnovljivih izvora.\n4.  **ZOC (Žaleći Operativni Centar) HROTE i TP (Gradska/Općinska Uprava):** Dionicari koji sudjeluju na javnim natječajima za ugovore o tržišnoj premiji i otkupu električne energije.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 18]\n",
+    "retrieved_contexts": [
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n94 \npotiče tržišnom premijom  dok kod ZOC-a HROTE otkupljuje energiju od proizvođača.  Sam \nugovor se potpisuje nakon uspješnog sudjelovanja na javnom natječaju (za ZOC ili TP) prije \nnego je započela gradnja postrojenja. Uz Ugovor o tržišnoj premiji proizvođač mora sklopiti \ni Ugovor o otkupu s otkupljivačem električne energije, a nakon izgradnje postrojenja i sklopiti \nUgovor o sudjelovanju na tržištu električne energije s HROTE-om. \nStatus povlaštenog proizvođača električne energije stječe se: \n• rješenjem HERA-e na temelju zahtjeva za pojedino proizvodno postrojenje ili \n• u slu čaju proizvodnje elektri čne energije u proizvodnim postrojenjima koje su",
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n18 \nNajbitniji pojmovi vezani uz postupke ishođenja dozvola za izgradnju proizvodnog postrojenja \niz OIE navedeni su u nastavku: \nMala postrojenja su proizvodna postrojenja ili proizvodne jedinice koje koriste OIE i VUK  s \ninstaliranim kapacitetom elektri čne energije manjim od 400 kW 6. Tako su definirana \nZOIEVUK-om i važećim europskim pravilima o ocjenjivanju odre đenih kategorija potpora \nspojivima s unutarnjim tržištem7. Mala postrojenja mogu biti izuzeta od direktnog sudjelovanja \nna tržištu električne energije te koristiti potporu izravne zaštite cijene (zajamčena otkupna \ncijena). \nKogeneracija je proces istovremene proizvodnje elektri čne energije i toplinske energije iz",
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n21 \ndjelatnosti12. Djelatnošću proizvodnje električne energije smatra se djelatnost proizvodnje \nelektrične energije od strane krajnjih kupaca s vlastitom proizvodnjom električne energije uz \nispunjenje ostalih uvjeta propisanih propisom kojim se uređuje preuzimanje električne \nenergije od krajnjih kupaca s vlastitom proizvodnjom ili korisnika postrojenja za samoopskrbu. \nAko fizičke osobe, proizvođači električne energije koje kao krajnji kupci s vlastitom \nproizvodnjom, a koje su prethodno bile proizvođači električne energije kao korisnici \npostrojenja za samoopskrbu, ostvare ukupan godišnji primitak veći od trostruk og iznosa"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 94,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 18,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 21,
+        "kategorija": "Pravni okvir i postupci"
+      }
+    ]
+  },
+  {
+    "id": "PRI-02",
+    "question": "Koji je postupak stjecanja statusa povlaštenog proizvođača električne energije iz obnovljivih izvora?",
+    "ground_truth": "Nakon ishođenja uporabne dozvole potrebno je od HERA-e ishoditi dozvolu za obavljanje energetske djelatnosti proizvodnje, a potom od HERA-e i rješenje o stjecanju statusa povlaštenog proizvođača električne energije, koje se izdaje na rok važenja od 25 godina. Dozvolu za obavljanje energetske djelatnosti nije potrebno ishoditi ako je zbroj instaliranih snaga svih postrojenja investitora do uključivo 500 kW i ako se postrojenje nalazi iza obračunskog mjernog mjesta aktivnog kupca. Proizvodna postrojenja koja su jednostavne građevine stječu status povlaštenog proizvođača temeljem ZOIEVUK-a i ne trebaju ishoditi rješenje HERA-e, osim ako žele sudjelovati u sustavu jamstva podrijetla energije.",
+    "reference_context": "Po ishođenju dozvole za obavljanje energetske djelatnosti potrebno je od HERA-e ishoditi rješenje o statusu povlaštenog proizvođača. Rješenje o stjecanju statusa povlaštenog proizvođača električne energije izdaje HERA na zahtjev stranke čije proizvodno postrojenje zadovoljava uvjete, na rok važenja od 25 godina. Proizvodna postrojenja koja su jednostavne građevine stječu status povlaštenosti temeljem ZOIEVUK-a te ne trebaju ishoditi rješenje od HERA-e, osim u slučaju ako se s takvim postrojenjem želi sudjelovati u sustavu jamstva podrijetla energije.",
+    "document": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije",
+    "category": "Procedure i dozvole",
+    "generated_answer": "Postupak stjecanja statusa povlaštenog proizvođača električne energije iz obnovljivih izvora uključuje sljedeće korake:\n\n1.  Rješenje o stjecanju statusa povlaštenog proizvođača električne energije izdaje se na temelju zahtjeva HERA-e ( Hrvatska elektroprivreda d.d.).\n2.  U slučaju proizvodnje električne energije u proizvodnim postrojenjima koje su već u funkciji, stječe se status povlaštenog proizvođača.\n\nTakođer, potrebno je sklopiti sljedeće ugovore:\n\n1.  Ugovor o tržišnoj premiji (potiče tržišnom premijom).\n2.  Ugovor o otkupu s otkupljivačem električne energije.\n3.  Ugovor o sudjelovanju na tržištu električne energije s HROTE-om.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljivih izvora - Električna energija], str. 85, 94",
+    "retrieved_contexts": [
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n85 \npropisane odredbama ZOIEVUK-a i Uredbe o korištenju obnovljivih izvora energije i \nvisokoučinkovitih kogeneracija. Rješenje o stjecanju statusa povlaštenog proizvođača \nelektrične energije izdaje se na rok važenja od 25 godina koji se računa od dana izvršnosti \nrješenja94.  \nRješenje o stjecanju statusa povlaštenog proizvođača prestaje važiti istekom roka na koje je \nizdano rješenje, odnosno njegovim stavljan jem izvan snage na zahtjev povlaštenog \nproizvođača, ukidanjem, poništavanjem ili oglaš ivanjem ništavim u skladu s odredbama \nZOIEVUK-a i zakona koji uređuje upravni postupak. \nProtiv rješenja o stjecanju statusa povlaštenog proizvođača električne energije žalba nije",
+      "se uređuje stjecanje statusa povlaštenog proizvođača električne energije\n63. vlastita potrošnja proizvodnog postrojenja je sva potrošnja električne energije povezana s proizvodnjom električne\nenergije, a uključuje potrošnju koja se koristi za potrebe rada proizvodnog postrojenja, opću potrošnju proizvodnog\npostrojenja, potrošnju električne energije povezanu s pripremom primarnog energenta ili upravljanjem izvorom\nenergije te drugu potrošnju iza obračunskih mjernih mjesta proizvodnog postrojenja. Vlastita potrošnja proizvodnog\npostrojenja podmiruje se proizvodnjom iz proizvodnog postrojenja ili proizvodne jedinice ili se preuzima iz mreže\npreko obračunskih mjernih mjesta proizvodnog postrojenja ili proizvodne jedinice, te se primjenjuje za električnu",
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n94 \npotiče tržišnom premijom  dok kod ZOC-a HROTE otkupljuje energiju od proizvođača.  Sam \nugovor se potpisuje nakon uspješnog sudjelovanja na javnom natječaju (za ZOC ili TP) prije \nnego je započela gradnja postrojenja. Uz Ugovor o tržišnoj premiji proizvođač mora sklopiti \ni Ugovor o otkupu s otkupljivačem električne energije, a nakon izgradnje postrojenja i sklopiti \nUgovor o sudjelovanju na tržištu električne energije s HROTE-om. \nStatus povlaštenog proizvođača električne energije stječe se: \n• rješenjem HERA-e na temelju zahtjeva za pojedino proizvodno postrojenje ili \n• u slu čaju proizvodnje elektri čne energije u proizvodnim postrojenjima koje su"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 85,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 8,
+        "kategorija": "Pravni okvir i postupci"
+      },
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 94,
+        "kategorija": "Obnovljivi izvori energije"
+      }
+    ]
+  },
+  {
+    "id": "PRI-03",
+    "question": "Kako funkcionira model samoopskrbe (vlastita potrošnja) za sunčane elektrane i kako se obračunavaju viškovi proizvedene energije?",
+    "ground_truth": "U modelu samoopskrbe elektrana je priključena iza obračunskog mjernog mjesta kupca, pa se proizvedena energija najprije troši za vlastite potrebe, a tek se višak predaje u mrežu. Opskrbljivač je dužan preuzimati viškove kupaca s vlastitom proizvodnjom koji zadovoljavaju uvjete iz članka 51. ZOIEVUK-a. Zajamčena minimalna otkupna cijena viškova Ci obračunava se kao Ci = 0,9 × PKCi (kada je preuzeta energija veća ili jednaka isporučenoj), pri čemu je PKCi prosječna jedinična cijena koju kupac plaća opskrbljivaču. Obračunsko razdoblje je kalendarski mjesec, a mjerenje se provodi dvosmjernim intervalnim brojilom.",
+    "reference_context": "Kod modela vlastite proizvodnje elektrana je priključena iza obračunskog mjernog mjesta kupca te se proizvedena električna energija najprije troši za pokrivanje vlastitih potreba, a tek višak se predaje u mrežu. ZOIEVUK-om je kupcu s vlastitom proizvodnjom zagarantirana minimalna otkupna cijena viškova Ci: Ci = 0,9 × PKCi ako vrijedi Epi ≥ Eii. Obračunsko razdoblje za kupca s vlastitom proizvodnjom je kalendarski mjesec.",
+    "document": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije",
+    "category": "Procedure i dozvole",
+    "generated_answer": "Model samoopskrbe kod solarnih elektrana funkcionalno je tako da korisnik maksimalno pokriva vlastite potrebe za električnom energijom, uz minimalne viškove proizvodnje i minimalan utjecaj na mrežu. U suštini, u dijelu dana kada je proizvodnja iz elektrane veća od trenutačne potrošnje, višak električne energije se predaje u elektroenergetsku mrežu. U suprotno, kada je proizvodnja manja od potreba ili nema proizvodnje, električna energija se preuzima iz mreže.\n\nUgovor o korištenju mreže i elektroenergetska suglasnost definiraju uvjete za ovu suradnju. Također, ugovor o opskrbi/otkupu definira odnos između kupca i opskrbljivača. Električna energija proizvedena iz vlastite elektrane isplativa je samo ako su troškovi njene izgradnje i proizvodnje niži od maloprodajne cijene električne energije kupljene od opskrbljivača.\n\nViškovi proizvedene energije se predaju u mrežu, a naknada za prijenos i distribuciju električne energije obračunava se prema specifičnim uvjetima utvrđenim Zakonom o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji. (19)\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljivih izvora energije - Električna energija], str. 90; [Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji], str. 53\n",
+    "retrieved_contexts": [
+      "ne znači da se elektri čna energija u stvarnom vremenu ne preuzima i ne predaje (u ve ćoj ili \nmanjoj mjeri) u mre žu. U dijelu dana kada je proizvodnja iz elektrane ve ća od trenuta čne \npotrošnje kupca višak električne energije se predaje u mrežu. U dijelu dana kada je proizvodnja \niz elektrane manja od trenutačne potrošnje kupca i kada nema proizvodnje, električna energija \nse preuzima iz mreže. \nModel vlastite proizvodnje kod kupaca vrlo je raširen u EU, bilo da se radi o ulaganju isključivo \nkorisničkog kapitala ili kombinaciji s javnom financijskom potporom u instalaciju fotonaponske \nelektrane.. \nIzgradnja i eksploatacija solarnih elektrana zahtijeva suradnju vi še strana kod realizacije \nprojekta. U pravilu, korisnik elektrane je ujedno vlasnik nekretnine na koju se postavlja",
+      "predaje u elektroenergetsku mrežu. Odnosi između takvog kupca i operatora mreže definirani \nsu elektroenergetskom suglasnošću , koja sadrži posebne uvjete i uvjete priključenja,  te \nugovorom o korištenju mreže , a između kupca i opskrbljivača definirani su ugovorom o \nopskrbi/otkupu. Električna energija proizvedena iz vlastite elektrane isplativa je u slučaju da su \ntroškovi njene izgradnje i proizvodnje niži od maloprodajne cijene električne energije kupljene \nod opskrbljivača.  \nCilj modela proizvodnje za vlastite potrebe treba biti maksimalna pokrivenost vlastitih potreba \nza električnom energijom uz minimalne viškove proizvodnje i minimalan utjecaj na mre žu. To \nne znači da se elektri čna energija u stvarnom vremenu ne preuzima i ne predaje (u ve ćoj ili",
+      "i/ili vlastitu potrošnju tijekom životnog vijeka tog proizvodnog postrojenja.\n(19) Prilikom određivanja tarifnih modela i tarifne stavke koja regulira naknadu za potrebu prijenosa i distribucije\nelektrične energije Agencija odnosno operatori sustava dužni su odrediti naknade za korištenje prijenosne i\ndistribucijske mreže za krajnje kupce s vlastitom proizvodnjom električne energije ili korisnika postrojenja za\nsamoopskrbu tako da odražavaju stvarne troškove te da su razmjerne i nediskriminirajuće.\n(20) Za proizvodnju električne energije koja se koristi za vlastitu potrošnju kod krajnjih kupaca s vlastitom\nproizvodnjom električne energije ili korisnika postrojenja za samoopskrbu ne obračunavaju se naknade i pristojbe."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 90,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 53,
+        "kategorija": "Obnovljivi izvori energije"
+      }
+    ]
+  },
+  {
+    "id": "PRI-04",
+    "question": "Koja je razlika između integriranih i neintegriranih sunčanih elektrana pri ishođenju dozvola?",
+    "ground_truth": "Neintegrirane sunčane elektrane su elektrane izgrađene kao samostojeće građevine, dok su integrirane one smještene na dijelovima građevina (krovovi, pokrovi, sjenila, balkoni, terase, nadstrešnice, fasade, prozori i dr.) ili na infrastrukturnim objektima. Razlika utječe na postupak: za neintegrirane se redom provode izrada idejnog rješenja, ishođenje energetskog odobrenja i elektroenergetske suglasnosti te građenje s uporabnom dozvolom. Za integrirane postupak započinje zahtjevom za priključenje operatoru distribucijskog sustava, nije potrebna građevinska ni uporabna dozvola (uz stručni nadzor i prijavu početka građenja), a građe se u skladu s glavnim projektom.",
+    "reference_context": "Neintegrirane sunčane elektrane su sunčane elektrane izgrađene kao samostojeće građevine. Integriranom sunčanom elektranom smatra se sunčana elektrana smještena na dijelovima građevina kao što su krovovi, pokrovi, sjenila, balkoni, terase, nadstrešnice, balustrade, fasade, prozori, vrata i druge površine građevina ili na transformatorskim stanicama, nadstrešnicama, mostovima i drugim infrastrukturnim objektima. Kod izgradnje integriranih sunčanih elektrana nije potrebno ishođenje građevinske dozvole; za integrirane elektrane ne izdaje se uporabna dozvola, ali je potreban stručni nadzor građenja i prijava početka građenja sukladno ZOG-u.",
+    "document": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije",
+    "category": "Procedure i dozvole",
+    "generated_answer": "Razlikuje se u tome što kod izgradnje integranih sunčanih elektrana nije potrebna građevinska dozvola jer se primjenjuju odredbe Pravilnika o jednostavnim i drugim građevinama i radovima. Takve elektrane grade na postojećim zgradama, a ne izdaje se uporabna dozvola, ali je potreban stručni nadzor građenja i prijava početka građenja sukladno ZOG-u. Kod neintegriranih sunčanih elektrana je potrebno ishođenje građevinske dozvole.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljivih izvora energije - Električna energija], str. 118\n",
+    "retrieved_contexts": [
+      "Kod izgradnje integriranih sunčanih elektrana nije potrebno ishođenje građevinske dozvole \njer se na njih primjenjuju odredbe Pravilnika o jednostavnim i drugim građevinama i radovima, \nkoji člankom 4. definira kako je mogu će bez gra đevinske dozvole, a u skladu s glavnim \nprojektom graditi pomo ćnu građevinu koja se gradi na gra đevnoj čestici postojeće zgrade, \nodnosno na gra đevnoj čestici zgrade za koju postoji akt kojim se odobrava gra đenje, za \npotrebe te zgrade. Za integrirane elektrane ne izdaje se uporabna dozvola, ali je potreban \nstručni nadzor građenja i prijava početka građenja građevine sukladno ZOG-u. \nAko se radi o elektrani za vlastite potrebe investitor nakon izgradnje elektrane sklapa aneks \nugovora o opskrbi električnom energijom s svojim opskrbljivačem.",
+      "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n118 \n7.1.2 Integrirane sunčane elektrane \nIntegriranom sun čanom elektranom smatra se, prema definiciji iz Uredbe o poticanju \nproizvodnje električne energije iz obnovljivih izvora energije i visokoučinkovitih kogeneracija, \nsunčana elektrana smje štena na dijelovima gra đevina kao što su krovovi, pokrovi, sjenila, \nbalkoni, terase, nadstrešnice, balustrade, fasade, prozori, vrata i druge površine građevina ili na \ntransformatorskim stanicama, nadstre šnicama, mostovima i drugim infrastrukturnim \nobjektima. Integrirana sun čana elektrana mo že i ne mora biti namijenjena za pokrivanje \nvlastitih potreba za električnom energijom kako definira ZOIEVUK.",
+      "izbjegavanje nepotrebnih narušavanja tržišta električne energije, te uzimajući u obzir moguće troškove integracije\nsustava i stabilnost mreže.\n(3) Programi potpora za električnu energiju iz obnovljivih izvora oblikuje se tako da se električna energija iz\nobnovljivih izvora maksimalno integrira u tržište električne energije i osigurava se da proizvođači energije iz\nobnovljivih izvora odgovaraju na tržišne cjenovne signale i uvećaju svoje tržišne prihode. U tu svrhu, a uzimajući u\nobzir neposredne programe zaštite cijena, potpora se daje u obliku tržišne premije, koja bi, među ostalim, mogla biti\npromjenjiva ili fiksna, uz izuzetak za mala postrojenja i demonstracijske projekte."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 118,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 18,
+        "kategorija": "Financiranje i potpore"
+      }
+    ]
+  },
+  {
+    "id": "MET-01",
+    "question": "Što je energetski pregled zgrade i koji su mu ciljevi prema Metodologiji 2021?",
+    "ground_truth": "Energetski pregled zgrade sustavni je postupak prikupljanja i analize podataka o energetskim karakteristikama zgrade s ciljem utvrđivanja energetskog razreda i preporuka za poboljšanje energetske učinkovitosti. Ciljevi i svrha opisani su na stranicama 1–15 Metodologije.",
+    "reference_context": "Stranice 1–15 Metodologije 2021 sadrže uvodni dio s definicijom energetskog pregleda, svrhom, ciljevima i opisom tijeka postupka energetskog certificiranja zgrada.",
+    "document": "Metodologija provođenja energetskog pregleda zgrada 2021",
+    "category": "Energetska učinkovitost",
+    "generated_answer": "Energetski pregled zgrade je postupak analize stanja i mogućnosti primjene mjera poboljšanja energetskih svojstava zgrade i poboljšanja energetske učinkovitosti u skladu s realnim uvjetima eksploatacije i uporabe zgrade.\n\nCiljevi energetskog pregleda, prema Metodologiji 2021, su:\n\n1.  Analiza stanja i mogućnosti primjene mjera poboljšanja energetskih svojstava zgrade i poboljšanja energetske učinkovitosti.\n2.  Prikupljanje svih potrebnih podataka i informacija o zgradi za provođenje postupka energetskog certificiranja zgrade i određivanja energetskog razreda zgrade u propisanim referentnim klimatskim podacima prema Algoritmu.\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021], str. 2\n",
+    "retrieved_contexts": [
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n2 \nSvrha energetskog pregleda je: \n analiza stanja i mogućnosti primjene mjera poboljšanja energetskih svojstava zgrade i \npoboljšanja energetske učinkovitosti u skladu s realnim uvjetima eksploatacije i uporabe \nzgrade,  \n prikupljanje svih potrebnih podataka i informacija o zg radama za provođenje postupka \nenergetskog certificiranja zgrade i određivanja energetskog razreda zgrade u propisanim \nreferentnim klimatskim podacima prema Algoritmu. \nOvom Metodologijom provođenja energetskog pregleda zgrada (u daljnjem tekstu: Metodologija) \nutvrđuje se provedba energetskih pregleda koja je pro pisana najnovijim Pravilnikom o \nenergetskom pregledu zgrade i energetskom certificiranju  (u daljnjem tekstu: Pravilnik ), kojim se",
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n12 \n2. PRIPREMA ZA ENERGETSKI PREGLED \n \nSlika 2-1 Aktivnosti po provedbenim koracima energetskog pregleda zgrade i energ. certificiranja zgrade",
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n54 \nSlika 3-36 Krajnji elementi za distribuciju zraka neprikladno smješteni za krajnjeg korisnika prostora"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 2,
+        "kategorija": "Energetski pregled zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 12,
+        "kategorija": "Energetski pregled zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 54,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "MET-02",
+    "question": "Što mora sadržavati plan mjerenja koji se izrađuje u sklopu pripreme kontrolnih mjerenja pri energetskom pregledu zgrade?",
+    "ground_truth": "Plan mjerenja ključni je dokument pripreme kontrolnih mjerenja koji mora sadržavati odgovore na pitanja: tko mjeri, gdje se mjeri, koliko traje mjerenje, tko je od strane korisnika odobrio mjerenje, s kojom se mjernom opremom mjeri te tko kontrolira mjerenje. Plan mjerenja mora biti sastavni dio dokumentacije koja se zajedno s rezultatima mjerenja predaje korisniku.",
+    "reference_context": "Priprema mjerenja mora uključivati izradu plana mjerenja. Plan mjerenja mora sadržavati odgovore na pitanja: Tko mjeri? Gdje se mjeri? Koliko traje mjerenje? Tko je od strane korisnika odobrio mjerenje? S kojom mjernom opremom se vrši mjerenje? Tko kontrolira mjerenje? Plan mjerenja mora biti sastavni dio dokumentacije koja se zajedno s rezultatima mjerenja predaje korisniku.",
+    "document": "Metodologija provođenja energetskog pregleda zgrada 2021",
+    "category": "Energetska učinkovitost",
+    "generated_answer": "Plan mjerenja, koji se izrađuje u sklopu pripreme kontrolnih mjerenja pri energetskom pregledu zgrade, mora sadržavati odgovore na sljedeća pitanja:\n\n1.  Tko mjeri?\n2.  Gdje se mjeri?\n3.  Koliko traje mjerenje?\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021], str. 15",
+    "retrieved_contexts": [
+      "mjerenja mora uključivati izradu plana mjerenja. Plan mjerenja je ključni dokument s kojim se mora \nupoznati i klijenta kako bi se osigurali optimalni uvjet i za njegovu provedbu. Uobičajeno se prije \nsame izrade plana mjerenja obavlja kratki posjet lokaciji kako bi se utvrdila točna mjesta gdje će \nse postaviti mjerna oprema te eliminirala sva eventualna iznenađenja. Naime, u slučajevima kad \nse plan mjerenja radi na temelju skica ili shema instalaci ja često se znaju dogoditi neugodna \niznenađenja prilikom samog postavljanja mjerene opreme, npr. glavni razvodni ormar je preuzak \nda bi se u njega mogla postaviti planirana mjerna opre ma. Plan mjerenja mora sadržavati \nodgovore na pitanja: \n Tko mjeri? \n Gdje se mjeri? \n Koliko traje mjerenje?",
+      "2. PRIPREMA ZA ENERGETSKI PREGLED \n \n15  \nstvarnom stanju zgrade i kako bi se pripremilo što kvalitetnije Izvješće o provedenom energetskom \npregledu zgrade neophodno je planiranje i izrada kvalitetne foto dokumentacije.  \nSve relevantne prikupljene podatke o zgradi potrebno je transparentno i jednoznačno prikazati u \nIzvješću o provedenom energetskom pregledu zgrade .  \nU slučaju provedbe energetskog pregleda, gdje se provode kontrolna mjerenja , nakon inicijalnog \nsastanka s klijentom koji je naručio energetski pregled po potrebi se može izraditi plan mjerenja, \nkoji će pratiti svaku od predloženih mjera za detaljnu analizu. Trajanje energetskog pregleda može \njako varirati (od nekoliko dana do nekoliko mjeseci), a sve ovisno o složenosti samog objekta koji",
+      "zgrade – SNIMAK POSTOJEĆEG STANJA,  \n provođenje kontrolnih mjerenja prema potrebi,  \n analizu potrošnje i troškova svih oblika energije, energe nata i vode za razdoblje od tri \nprethodne kalendarske godine – ENERGETSKA ANALIZA (ni je nužno potrebno \nprovesti za samostalne uporabne cjeline stambene ili nestambene namjene i obiteljske \nkuće prilikom prodaje, iznajmljivanja, davanja u zakup, odnosno davanja na leasing),  \n prijedlog mjera za poboljšanje energetske učinkovitosti zgr ade, odnosno za \npoboljšanje energetskih svojstava zgrade koje su ekonomski opravdane s proračunom \nperioda povrata investicija i izvore cijena za provođenje predloženih mjera,  \n izvješće i zaključak s preporukama i redoslijedom proved be ekonomski opravdanih"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 15,
+        "kategorija": "Energetski pregled zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 6,
+        "kategorija": "Energetski pregled zgrada"
+      }
+    ]
+  },
+  {
+    "id": "MET-03",
+    "question": "Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021?",
+    "ground_truth": "Mjere energetske učinkovitosti na vanjskoj ovojnici zgrade obuhvaćaju toplinsku izolaciju vanjskih zidova, ravnih krovova, kosih krovova i stropova prema provjetravanom tavanu, zidova prema negrijanim prostorima, stropova iznad vanjskog zraka, zidova i podova prema tlu te toplinskih mostova; brtvljenje i izmjenu stolarije/bravarije; toplinsku izolaciju kutija za rolete te ugradnju zaštite od Sunčevog zračenja. To su sve mjere na građevinskoj ovojnici koje doprinose smanjenju potrebne energije za grijanje i hlađenje zgrade.",
+    "reference_context": "Mjere energetske učinkovitosti kod vanjske ovojnice zgrade: toplinska izolacija vanjskih zidova, ravnih krovova, stropova prema provjetravanom tavanu i kosih krovova, zidova prema negrijanim prostorima, stropova iznad vanjskog zraka; brtvljenje stolarije/bravarije; toplinska izolacija zidova i podova prema tlu, stropova i podova negrijanih prostorija prema grijanima, toplinskih mostova; izmjena stolarije/bravarije; toplinska izolacija kutija za rolete; ugradnja zaštite od Sunčevog zračenja. Mjere povećanja energetske učinkovitosti vanjske ovojnice sve su mjere na građevinskoj ovojnici zgrade koje doprinose smanjenju potrebne energije za grijanje i hlađenje zgrade.",
+    "document": "Metodologija provođenja energetskog pregleda zgrada 2021",
+    "category": "Energetska učinkovitost",
+    "generated_answer": "U Metodologiji provođenja energetskog pregleda zgrada 2021, mjere povećanja energetske učinkovitosti kod sustava grijanja i pripreme potrošne tople vode (PTV) uključuju korištenje alternativnih/obnovljivih izvora energije, a to su:\n\n*   korištenje biomase\n*   korištenje energije Sunčevog zračenja\n*   korištenje geotermalne energije\n*   kogeneracija/trigeneracija\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021, str. 198]",
+    "retrieved_contexts": [
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n198 \n6.1.3. Popis mjera povećanja energetske učinkovitos ti – \ntermotehnički sustavi \nUobičajene mjere povećanja energetske učinkovitosti, koje se predlažu kod termotehničkih \nsustava, prikazane su zasebno za pojedini termotehnički sustav.  \nMjere povećanja energetske učinkovitosti kod sustava grij anja i pripreme potrošne tople \nvode (PTV): \n korištenje alternativnih/obnovljivih izvora energije \n- korištenje biomase,  \n- korištenje energije Sunčevog zračenja,  \n- korištenje geotermalne energije,  \n- kogeneracija/trigeneracija,  \n zamjena ekološki neprihvatljivog energenta (npr. EL loživo g ulja) s ekološki prihvatljivim \nenergentom (manja emisija CO 2 u okoliš), te s nižom jediničnom cijenom po kWh",
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n2 \nSvrha energetskog pregleda je: \n analiza stanja i mogućnosti primjene mjera poboljšanja energetskih svojstava zgrade i \npoboljšanja energetske učinkovitosti u skladu s realnim uvjetima eksploatacije i uporabe \nzgrade,  \n prikupljanje svih potrebnih podataka i informacija o zg radama za provođenje postupka \nenergetskog certificiranja zgrade i određivanja energetskog razreda zgrade u propisanim \nreferentnim klimatskim podacima prema Algoritmu. \nOvom Metodologijom provođenja energetskog pregleda zgrada (u daljnjem tekstu: Metodologija) \nutvrđuje se provedba energetskih pregleda koja je pro pisana najnovijim Pravilnikom o \nenergetskom pregledu zgrade i energetskom certificiranju  (u daljnjem tekstu: Pravilnik ), kojim se",
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n192 \n6. PRIJEDLOG MJERA POVEĆANJA ENERGETSKE \nUČINKOVITOSTI \nOpćenito postoje dvije vrste mjera povećanja energetske učinkovitosti:  \n1. Mjere energetske učinkovitosti \nCilj primjene mjera je ušteda energije i/ili vode uz za državanje ili poboljšanje udobnosti \nboravka, kvalitete usluge ili kvalitete proizvoda. Rezulta t mjera je ušteda u potrošnji \nenergije i/ili vode, troškova za energiju i/ili vodu te smanjenje emisija stakleničkih plinova. \n2. Mjere sa ciljem zadovoljavanja minimalnih propis anih tehničkih uvjeta \nCilj ove mjere je poboljšanje udobnosti boravka, kvalite te usluge ili kvalitete proizvoda te \nzadovoljavanje važećih minimalnih tehničkih uvjeta definir anih propisima. Takve mjere"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 198,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 2,
+        "kategorija": "Energetski pregled zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 192,
+        "kategorija": "Obnovljivi izvori energije"
+      }
+    ]
+  },
+  {
+    "id": "MET-04",
+    "question": "Za koje sustave i uz koji prag nazivne snage je prema Metodologiji 2021 obvezan redoviti pregled sustava grijanja i hlađenja prostora?",
+    "ground_truth": "Redoviti pregled sustava grijanja prostora obvezno se provodi za sve dostupne dijelove centralnog sustava grijanja ili kombiniranog sustava grijanja i prisilne ventilacije/klimatizacije nazivne toplinske snage veće od 70 kW (izvor toplinske energije, cirkulacijske crpke i sustav regulacije). Redoviti pregled sustava hlađenja prostora obvezan je za centralne sustave hlađenja nazivne rashladne snage veće od 70 kW. Kod više centralnih izvora koji rade zajednički, ukupna se nazivna snaga računa kao zbroj pojedinačnih snaga.",
+    "reference_context": "Redoviti pregled sustava grijanja prostora provodi se obvezno za sve dostupne dijelove centralnog sustava grijanja prostora ili kombiniranog centralnog sustava grijanja i prisilne ventilacije/klimatizacije prostora, nazivne toplinske snage veće od 70 kW, kao što su izvor toplinske energije (generator topline), cirkulacijske crpke i sustav regulacije. Redoviti pregled sustava hlađenja prostora obvezno se provodi za sve dostupne dijelove centralnog sustava hlađenja prostora ili kombiniranog sustava hlađenja i prisilne ventilacije/klimatizacije prostora, nazivne rashladne snage veće od 70 kW. U slučaju više centralnih izvora koji zajednički rade, ukupna nazivna toplinska snaga računa se kao zbroj pojedinačnih nazivnih toplinskih snaga.",
+    "document": "Metodologija provođenja energetskog pregleda zgrada 2021",
+    "category": "Energetska učinkovitost",
+    "generated_answer": "Prema Metodologiji provođenja energetskog pregleda zgrada 2021., redoviti pregled sustava grijanja i hlađenja prostora obvezan je u sljedećim slučajevima:\n\n1.  **Za kompleks zgrade koji se sastoji od više zasebnih zgrada odnosno samostalnih uporabnih cjelina s centralno izvedenom toplinskom/rashladnom energijom:** Izrađuje se zajedničko izvješće za cijeli kompleks za sustav grijanja i/ili hlađenja.\n2.  **U slučajevima kada je obvezan redoviti pregled sustava grijanja prostora** ako:\n    *   postoji obveza provođenja redovitog pregleda sustava grijanja prostora i promatrana tlačno/odsisna klima komora ima samo grijač ili,\n    *   postoji obveza provođenja redovitog pregleda sustava grijanja prostora, a ne postoji obveza provođenja redovitog pregleda sustava hlađenja prostora, te promatrana tlačno/odsisna klima komora ima grijač i hladnjak.\n3.  **U slučajevima kada je obvezan redoviti pregled sustava hlađenja prostora** ako:\n    *   postoji obveza provođenja redovitog pregleda sustava hlađenja prostora i promatrana tlačno/odsisna klima komora ima grijač i hladnjak ili samo hladnjak.\n4.  **Za zgrade s redovitim pregledom sustava grijanja i hlađenja prostora.**\n\nNema navedenog praga nazivne snage za obveznost provođenja redovitog pregleda. Pregled je obvezan ovisno o konfiguraciji i načinu izvođenja grijanja i hlađenja u zgradi.\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021, str. 271]",
+    "retrieved_contexts": [
+      "Metodologija provođenja energetskog pregleda zgrada  2021   \n \n274  \nredoviti pregled sustava hlađenja, odnosno dizalicu to plinu nije potrebno obuhvatiti redovitim \npregledom sustava grijanja.  \nU nastavku su dane upute za ispunjavanje svakog izvješća zasebno.  \nUkoliko je sustav grijanja i hlađenja za potrebe nekog kompleksa, koji se sastoji od više \nzasebnih zgrada odnosno samostalnih uporabnih cjelina,  izveden centralno (zajednička \nkotlovnica s kotlovima kao izvorima toplinske energije, zajed nički izvor rashladne energije), \nizrađuje se po jedno zajedničko izvješće za cijeli kompleks za sustav grijanja odnosno za sustav \nhlađenja:  \nIzvješće o provedenom redovitom pregledu sustava grijanja prostora i \nIzvješće o provedenom redovitom pregledu sustava hlađenja prostora .",
+      "pregleda sustava grijanja prostora  ako: \n postoji obveza provođenja redovitog pregleda sustava grijanja prostora i promatrana \ntlačno/odsisna klima komora ima samo grijač ili,  \n postoji obveza provođenja redovitog pregleda sustava g rijanja prostora, a ne postoji \nobveza provođenja redovitog pregleda sustava hlađenja p rostora, te promatrana \ntlačno/odsisna klima komora ima grijač i hladnjak.  \nRedoviti pregled sustava prisilne ventilacije/klima tizacije se provodi u sklopu redovitog \npregleda sustava hlađenja prostora  ako:  \n postoji obveza provođenja redovitog pregleda sustava hla đenja prostora i promatrana \ntlačno/odsisna klima komora ima grijač i hladnjak ili samo hladnjak. \nDakle, ukoliko se za neku zgradu provodi redoviti pregled  sustava grijanja i hlađenja prostora,",
+      "Kod redovitih pregleda sustava hlađenja prostora zgrade se razlikuju:  \n redoviti pregledi sustava hlađenja,  \n redoviti pregledi kombiniranog sustava hlađenja i prisilne ventilacije/klimatizacije.  \nGrijanje prostora zgrade može se ostvariti:  \n sobnim sustavom (radijatori, ventilokonvektori, po vršinski sustavi grijanja, …),  \n GViK sustavom (klima komora s grijačem),  \n sobnim i GViK sustavom.  \nHlađenje prostora zgrade može se ostvariti:  \n sobnim sustavom (ventilokonvektori, površinski sus tavi hlađenja, …),  \n GViK sustavom (klima komora s hladnjakom),  \n sobnim i GViK sustavom."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 274,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 272,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 271,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "VEN-01",
+    "question": "Koje uvjete moraju ispunjavati tehnička svojstva sustava ventilacije prema Tehničkom propisu o sustavima ventilacije?",
+    "ground_truth": "Tehnička svojstva sustava ventilacije moraju biti takva da tijekom trajanja zgrade podnesu utjecaje uobičajene uporabe i okoliša tako da se u slučaju požara spriječi širenje vatre i dima unutar zgrade i na susjedne građevine, da se zadovolje uvjeti kvalitete zraka i spriječi sakupljanje vlage, da se izbjegnu moguće ozljede korisnika te da razina buke ne ugrožava zdravlje i osigurava noćni mir. Kod sustava s procesom grijanja zraka, djelomične klimatizacije i klimatizacije dodatno se moraju osigurati zadovoljavajući toplinski uvjeti uz potrošnju energije jednaku ili nižu od propisane.",
+    "reference_context": "Tehnička svojstva sustava ventilacije moraju biti takva da podnesu sve utjecaje uobičajene uporabe i okoliša tako da: se u slučaju požara spriječi širenje vatre i dima unutar zgrade odnosno na susjedne građevine; se zadovolje uvjeti kvalitete zraka te spriječi sakupljanje vlage; se izbjegnu moguće ozljede korisnika zgrade; razina buke ne ugrožava zdravlje i osigurava noćni mir. Sustavi s procesom grijanja zraka, djelomične klimatizacije i klimatizacije moraju dodatno osigurati zadovoljavajuće toplinske uvjete uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom.",
+    "document": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+    "category": "Tehnički propisi",
+    "generated_answer": "Tehnička svojstva sustava ventilacije s procesom grijanja zraka, sustava djelomične klimatizacije i sustava klimatizacije moraju biti takva da tijekom trajanja zgrade u koju su ugrađeni podnesu sve utjecaje uobičajene uporabe i utjecaje okoliša tako da:\n\n1.  Ispunje sve uvjete iz stavka 1. ovoga članka.\n2.  Osiguraju zadovoljavajući toplinski uvjeti u zgradi uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom.\n\nIzvor: [Tehnički propis o sustavima ventilacije, str. 8]",
+    "retrieved_contexts": [
+      "– sustav klimatizacije – je sustav kojim se djeluje na temperaturu, vlažnost i kvalitetu \nzraka te ostvaruje prisilna izmjena zraka u prostoriji što neposredno služi postizanju \nmikro higijenskih uvjeta i odgovarajućeg stupnja ugodnosti prostora, \n– sustav djelomične klimatizacije – je sustav kod kojeg bilo koja od značajki koje mora \nispunjavati sustav klimatizacije nije ispunjena i kontrolirana, \n– prirodna ventilacija – je prozračivanje prostorija kod kojeg se zrak u prostoriji \nizmjenjuje korištenjem njegovih prirodnih svojstava pri različitim temperaturama u \nprostoriji i izvan nje, a ostvaruje se kroz prozore, kontrolirane otvore na pročeljima ili \nventilacijskim kanalima,",
+      "da se osigura noćni mir i zadovoljavajući uvjeti za odmor i rad te da se sustavima spriječi \nširenje buke između pojedinih prostora u zgradi. \n(2) Tehnička svojstva sustava ventilacije s procesom grijanja zraka, sustava djelomične \nklimatizacije i sustava klimatizacije moraju biti takva da tijekom trajanja zgrade u koju su \nugrađeni podnesu sve utjecaje uobičajene uporabe i utjecaje okoliša tako da: \n– ispune sve uvjete iz stavka 1. ovoga članka i \n– osiguraju zadovoljavajuće toplinske uvjete u zgradi uz potrošnju energije jednaku ili \nnižu od potrošnje određene posebnim propisom. \n(3) Tehnička svojstva iz stavka 1. i 2. ovoga članka postižu se projektiranjem i izvođenjem \nsustava u skladu s odredbama ovoga propisa.",
+      "sustav grijanja, kogeneracija, sustav grijanja  podsustav akumulacije toplinske energije, sustav \npripreme potrošne tople vode – podsustav akumulacije toplinske energije, redoviti pregled sustava \nprisilne ventilacije/klimatizacije.  \nKompletni sadržaj Izvješća o provedenom redovitom pregledu sustava grijan ja prostora  zbog \nopsežnosti nije dan u nastavku Metodologije, već su nastavku objašnjeni pojedini dijelovi Izvješća"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 6,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 8,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 276,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "VEN-02",
+    "question": "Što mora sadržavati strojarski projekt sustava ventilacije kao sastavni dio glavnog projekta zgrade prema Tehničkom propisu?",
+    "ground_truth": "Strojarski projekt sustava mora u tehničkom opisu sadržavati opis rada sustava i procesa gospodarenja energijom, utjecaj sustava na okoliš (buka, vibracije, zagađenost, povrat topline), rješenje ugradnje i pričvršćenja na nosivu konstrukciju, određivanje dijelova za sprječavanje širenja vatre i dima te uvjete održavanja. U proračunima mora sadržavati termodinamički proračun toplinskih opterećenja, proračun tehničkih svojstava komponenata, hidrauličke proračune vodnih i zračnih sustava te proračun sustava povrata energije za uređaje s količinom vanjskog zraka većom od 2 500 m³/h.",
+    "reference_context": "Strojarski projekt sustava koji je sastavni dio glavnog projekta zgrade mora sadržavati osobito u tehničkom opisu: opis rada sustava i način uporabe te opis procesa gospodarenja energijom; utjecaj sustava na okoliš (buka, vibracije, zagađenost, povrat topline); opis rješenja ugradnje, pričvršćenja i ovješenja na nosivu konstrukciju; određivanje svojstava i položaja dijelova namijenjenih sprječavanju širenja vatre i dima; uvjete održavanja. U proračunima (ovisno o sustavu): termodinamički proračun toplinskih opterećenja zgrade (ljeto/zima), proračun tehničkih svojstava komponenata, hidraulički proračun vodnih i zračnih sustava, proračun sustava povrata energije za sve uređaje s količinom vanjskog zraka većom od 2 500 m³/h.",
+    "document": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+    "category": "Tehnički propisi",
+    "generated_answer": "Strojarski projekt sustava ventilacije, kao sastavni dio glavnog projekta zgrade, mora sadržavati sljedeće:\n\n1.  Nacrte (tlocrti, presjeke, poglede) i prostorne prikaze sa točnim položajem sustava u zgradi.\n2.  Funkcionalne sheme sustava.\n3.  U nacrtima:\n    *   Položaj prodora i prolaza ventilacijskih kanala i cijevnog razvoda energetskih medija u zgradi.\n    *   Položaj ulaznih i izlaznih otvora ventilacijskih kanala.\n\nIzvor: [Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 12]",
+    "retrieved_contexts": [
+      "zaštite u odnosu na ventilaciju, djelomičnu klimatizaciju i klimatizaciju zgrada. \nČlanak 11. \nTehnička svojstva sustava moraju biti takva da, osim ispunjavanja zahtjeva iz ovoga Propisa, \nbudu ispunjeni i zahtjevi posebnih propisa kojima se uređuje ispunjavanje drugih bitnih \nzahtjeva za zgradu. \nČlanak 12. \nSustavi moraju nakon rekonstrukcije odnosno adaptacije zgrade čiji su sastavni dio, a kojima \nse utječe na postojeći sustav, imati tehnička svojstva propisana člankom 9. stavkom 1. i 2. i \nčlankom 11. ovoga Propisa. \nIII. PROJEKTIRANJE SUSTAVA \nČlanak 13. \n(1) Projektiranjem sustava moraju se za izvođenje i projektirani uporabni vijek sustava i \nzgrade predvidjeti svi utjecaji na sustave koji proizlaze iz načina i redoslijeda izvođenja,",
+      "kod pune zaposjednutosti zgrade, \n– druge uvjete značajne za ispunjavanje zahtjeva propisanih ovim propisom i \nposebnim propisima. \n4. u crtežima: \n– situaciju zgrade u koju je ugrađen sustav izrađenu na izvodu iz katastra, \n– nacrte (tlocrte, presjeke, poglede) i prostorne prikaze sa točnim položajem sustava u \nzgradi, \n– funkcionalne sheme sustava. \n(3) Nacrti iz točke 4. prethodnog stavka moraju biti izrađeni minimalno u mjerilu 1:100. \n(4) Arhitektonski ili građevinski projekt u dijelu koji se odnosi na tehničko rješenje sustava \nmora sadržavati osobito: \n1. u nacrtima: \n– položaj prodora i prolaza ventilacijskih kanala i cijevnog razvoda energetskih medija \nu zgradi, \n– položaj ulaznih i izlaznih otvora ventilacijskih kanala,",
+      "B.2.1.2. Rukovanje, skladištenje i zaštita građevnih, strojarskih i drugih proizvoda od kojih su \nizvedeni sustavi treba biti u skladu sa zahtjevima tehničkih specifikacija građevnih, \nstrojarskih i drugih proizvoda sustava, projekta zgrade te odredbama ovoga priloga i \nodredbama posebnih propisa. \nB.2.1.3. Izvođač sustava mora prije početka izvedbe sustava provjeriti odgovaraju li građevni, \nstrojarski i drugi proizvodi sustava zahtjevima iz projekta zgrade te je li tijekom rukovanja i \nskladištenja tih proizvoda došlo do njihovog oštećivanja, deformacije ili drugih promjena koje \nbi bile od utjecaja na tehnička svojstva sustava. \nB.2.1.4. Nadzorni inženjer neposredno prije početka izvođenja sustava mora:"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 9,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 12,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 22,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "VEN-03",
+    "question": "Što nadzorni inženjer mora provjeriti neposredno prije početka izvođenja sustava ventilacije prema Prilogu B Tehničkog propisa?",
+    "ground_truth": "Nadzorni inženjer mora neposredno prije početka izvođenja sustava provjeriti postoji li isprava o sukladnosti u skladu s posebnim propisima za građevne, strojarske i druge proizvode koji se ugrađuju te jesu li iskazana svojstva sukladna zahtjevima iz projekta zgrade; provjeriti jesu li ti proizvodi ugrađeni u skladu s projektom zgrade i/ili tehničkom uputom za ugradnju i uporabu, s Prilogom A propisa i odredbama posebnih propisa; te dokumentirati nalaze svih provedenih provjera zapisom u građevinski dnevnik.",
+    "reference_context": "Nadzorni inženjer neposredno prije početka izvođenja sustava mora: a) provjeriti postoji li isprava o sukladnosti u skladu s posebnim propisima za građevne, strojarske i druge proizvode koji se ugrađuju u sustave i jesu li iskazana svojstva sukladna zahtjevima iz projekta zgrade, b) provjeriti jesu li građevni, strojarski i drugi proizvodi ugrađeni u skladu s projektom zgrade i/ili tehničkom uputom za ugradnju i uporabu sustava, s Prilogom »A« ovoga propisa i odredbama posebnih propisa, c) dokumentirati nalaze svih provedenih provjera zapisom u građevinski dnevnik.",
+    "document": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+    "category": "Tehnički propisi",
+    "generated_answer": "Nadzorni inženjer mora provjeriti sljedeće prije početka izvođenja sustava ventilacije prema Prilogu B Tehničkog propisa:\n\n1.  Izvanredni pregled sustava koji uključuje ispitivanja odgovarajućom primjenom normi iz točke D.4.2. normama na koje te norme upućuju, te odredbi ovog priloga i posebnih propisa.\n2.  Da se zamjena dijelova sustava provede na način da se tim radovima ne utječe na zatečena tehnička svojstva zgrade koja nisu u vezi s ventilacijom.\n\nIzvor: [Tehnički propis o sustavima ventilacije, str. 24]",
+    "retrieved_contexts": [
+      "dezinficira. \nB.3.3.4. Izvanredni pregled sustava provodi se prije svake promjene na sustavu, nakon \nsvakog izvanrednog događaja koji može utjecati na tehnička svojstva sustava ili izaziva \nsumnju u uporabljivost sustava te po inspekcijskom nadzoru, a uključuje ispitivanja sustava \nodgovarajućom primjenom normi iz točke D.4.2. normama na koje te norme upućuju, te \nodredbama ovoga priloga i posebnih propisa. \nB.3.4. Zamjena dijelova sustava mora se provesti na način da se tim radovima ne utječe na \nzatečena tehnička svojstva zgrade koja nisu u vezi s ventilacijom, djelomičnom",
+      "jednobrzinskih crpki sustava grijanja i PTV-a s elektronskim)  potrebno je obratiti pažnju na \nizračunate uštede kako se uštede ne bi računale dva puta. Sve uštede je potrebno računati prema \nstvarnoj potrošnji energije i vode  na lokaciji. Ukoliko nema računa za potrošnju energije/ vode \nproračun godišnje uštede energije/vode se provodi za stv arne klimatske podatke i stvarni režim \nrada tehničkih sustava. Ukoliko se prostor ne koristi i tehnički sustavi ne rade, u proračun ušteda \nse uzima režim rada tehničkih sustava propisan Algoritmom.  \nOptimalna kombinacija mjera  (odnosno prema energetskom certifikatu preporučena \nkombinacija mjera ) je ona kombinacija koja donosi najveću uštedu u energetskom, ekološkom",
+      "kod pune zaposjednutosti zgrade, \n– druge uvjete značajne za ispunjavanje zahtjeva propisanih ovim propisom i \nposebnim propisima. \n4. u crtežima: \n– situaciju zgrade u koju je ugrađen sustav izrađenu na izvodu iz katastra, \n– nacrte (tlocrte, presjeke, poglede) i prostorne prikaze sa točnim položajem sustava u \nzgradi, \n– funkcionalne sheme sustava. \n(3) Nacrti iz točke 4. prethodnog stavka moraju biti izrađeni minimalno u mjerilu 1:100. \n(4) Arhitektonski ili građevinski projekt u dijelu koji se odnosi na tehničko rješenje sustava \nmora sadržavati osobito: \n1. u nacrtima: \n– položaj prodora i prolaza ventilacijskih kanala i cijevnog razvoda energetskih medija \nu zgradi, \n– položaj ulaznih i izlaznih otvora ventilacijskih kanala,"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 24,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 206,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 12,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "VEN-04",
+    "question": "Koliko se često provode redoviti pregledi sustava ventilacije tijekom održavanja i za koje je sustave ispitivanje obvezno prema Tehničkom propisu?",
+    "ground_truth": "Učestalost redovitih pregleda u svrhu održavanja sustava provodi se sukladno zahtjevima projekta zgrade, ali ne rjeđe od jednom godišnje. Ispitivanje sustava tijekom održavanja obvezno je za sustave ogrjevnog učina preko 20 kW i rashladnog učina preko 12 kW. Prigodom pregleda sustav se obvezno čisti i dezinficira.",
+    "reference_context": "Ispitivanje sustava tijekom održavanja obavezno je za sustave ogrijevnog učina preko 20 kW i rashladnog učina preko 12 kW. Učestalost redovitih pregleda u svrhu održavanja sustava provodi se sukladno zahtjevima projekta zgrade, ali ne rjeđe od jednom godišnje. Prigodom pregleda sustava sustav se obvezno čisti i dezinficira.",
+    "document": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+    "category": "Tehnički propisi",
+    "generated_answer": "Prema navedenim dokumentima, redoviti pregledi sustava ventilacije provode se kao dio održavanja. Konkretno, redoviti pregled sustava prisilne ventilacije/klimatizacije je uključen u Metodologiju provođenja energetskog pregleda zgrada.\n\nPrema Tehničkom propisu o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada (članak 11.), tehnička svojstva sustava moraju biti takva da ispunjavaju zahtjeve Propisa, uz ispunjenje drugih bitnih zahtjeva za zgradu. Članak 12. propisuje da sustavi nakon rekonstrukcije odnosno adaptacije zgrade čiji su sastavni dio, moraju imati tehnička svojstva propisana člankom 9. stavkom 1. i 2. i člankom 11. ovoga Propisa.\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021], str. 276\nIzvor: [Tehnički propis o sustavima ventilacije], str. 9",
+    "retrieved_contexts": [
+      "Na samom početku Izvješća o provedenom redovitom pregledu sustava grijan ja prostora  važno \nje označiti vrstu redovitog pregleda sustava grijanja prostora:  \n☐  sustava grijanja prostora  \n☐  kombiniranog sustava grijanja i prisilne ventilacije/klimatizacije  \nUkoliko se ne označi redoviti pregled kombiniranog sustav a grijanja i prisilne ventilacije i \nklimatizacije, već samo redoviti pregled sustava grijanj a prostora, automatski se certifikatoru \nsakriva unos podataka pod točkom 3. koja se odnosi na klima  komore. Odnosno to znači da se \nklima komore ne koriste za toplozračno grijanje prostora  zgrade, već se za prijenos toplinske \nenergije u prostor koriste ogrjevna tijela (ogrjevna tijela), spojena na cijevni razvod i jedan ili više \ncentralnih izvora toplinske energije.",
+      "zaštite u odnosu na ventilaciju, djelomičnu klimatizaciju i klimatizaciju zgrada. \nČlanak 11. \nTehnička svojstva sustava moraju biti takva da, osim ispunjavanja zahtjeva iz ovoga Propisa, \nbudu ispunjeni i zahtjevi posebnih propisa kojima se uređuje ispunjavanje drugih bitnih \nzahtjeva za zgradu. \nČlanak 12. \nSustavi moraju nakon rekonstrukcije odnosno adaptacije zgrade čiji su sastavni dio, a kojima \nse utječe na postojeći sustav, imati tehnička svojstva propisana člankom 9. stavkom 1. i 2. i \nčlankom 11. ovoga Propisa. \nIII. PROJEKTIRANJE SUSTAVA \nČlanak 13. \n(1) Projektiranjem sustava moraju se za izvođenje i projektirani uporabni vijek sustava i \nzgrade predvidjeti svi utjecaji na sustave koji proizlaze iz načina i redoslijeda izvođenja,",
+      "sustav grijanja, kogeneracija, sustav grijanja  podsustav akumulacije toplinske energije, sustav \npripreme potrošne tople vode – podsustav akumulacije toplinske energije, redoviti pregled sustava \nprisilne ventilacije/klimatizacije.  \nKompletni sadržaj Izvješća o provedenom redovitom pregledu sustava grijan ja prostora  zbog \nopsežnosti nije dan u nastavku Metodologije, već su nastavku objašnjeni pojedini dijelovi Izvješća"
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 277,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "stranica": 9,
+        "kategorija": "Mjere obnove zgrada"
+      },
+      {
+        "naziv_dokumenta": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "stranica": 276,
+        "kategorija": "Mjere obnove zgrada"
+      }
+    ]
+  },
+  {
+    "id": "JPO-01",
+    "question": "Tko može biti korisnik sredstava i koje uvjete mora ispuniti prijavitelj na Javni poziv EnU-6/25?",
+    "ground_truth": "Korisnici sredstava mogu biti fizičke osobe – građani, vlasnici ili suvlasnici obiteljske kuće koji u trenutku puštanja fotonaponske elektrane u pogon imaju prebivalište na adresi i mjestu kuće. Prijavitelj mora uložiti vlastita sredstva, nemati dospjelih nepodmirenih dugovanja prema Fondu te dostaviti svu obveznu dokumentaciju sukladno Pozivu.",
+    "reference_context": "Korisnici sredstava u smislu ovog Poziva su fizičke osobe – građani, vlasnici ili suvlasnici obiteljske kuće koji u trenutku puštanja fotonaponske elektrane u pogon imaju prebivalište na adresi i mjestu kuće.",
+    "document": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+    "category": "Financiranje i potpore",
+    "generated_answer": "Korisnici sredstava u smislu ovog Poziva su fizičke osobe – građani, vlasnici ili suvlasnici obiteljske kuće.\n\nPrijavitelj mora ispuniti sljedeće uvjete:\n\n1.  Imajući na umu da je poziv [NEAKTIVAN / rok istekao], prijavitelj mora imati prebivalište na adresi i mjestu kuće u trenutku puštanja fotonaponske elektrane u pogon.\n2.  U iznimnom slučaju, ako je jedan od suvlasnika obiteljske kuće Republika Hrvatska (RH) ili jedinica lokalne samouprave (JLP(R)S), korisnici mogu biti fizičke osobe - građani koji su suvlasnici 50% i više bruto podne površine obiteljske kuće.\n3.  Fizičke osobe – građani koji 50% i više bruto podne površine obiteljske kuće koriste za obavljanje gospodarske djelatnosti ne mogu biti korisnici sredstava Fonda.\n\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 2]",
+    "retrieved_contexts": [
+      "Poziv traje do isteka kalendarske godine ili do iskorištenja sredstava, ovisno o tome koji \nuvjet prije nastupi. Obavijest o privremenom/trajnom zatvaranju Poziva bit će javno \ndostupna putem mrežne stranice Fonda www.fzoeu.hr. \nU roku za dostavu prijava na Poziv prijavitelj može podnijeti ukupno jednu prijavu \npri čemu se ista prijava odnosi na jedno ili sva obračunska mjerna mjesta (OMM) u \nobiteljskoj kući. \nAko postoji više suvlasnika obiteljske kuće svaki od suvlasnika može poslati \nprijavu za vlastito OMM. \nU slučaju etažnog vlasništva obiteljske kuće prijavitelj mora biti isključivo \nvlasnik/suvlasnik etažnog dijela na koji se odnosi OMM. \nPodnošenjem prijave prijavitelj istodobno potvrđuje da je upoznat s Općim uvjetima",
+      "Korisnici sredstava u smislu ovog Poziva su fizičke osobe – građani, vlasnici ili suvlasnici \nobiteljske kuće koji u trenutku puštanja fotonaponske elektrane u pogon ima ju \nprebivalište4 na adresi i mjestu kuće.  \nIznimno, ako je jedan od suvlasnika obiteljske kuće Republika Hrvatska (dalje u tekstu: \nRH) ili jedinica lokalne, područne (regionalne) samouprave (dalje u tekstu: JLP(R)S), \nkorisnici mogu biti fizičke osobe - građani koji su suvlasnici 50% i više bruto podne \npovršine obiteljske kuće. \nFizičke osobe – građani koji 50% i više bruto podne površine obiteljske kuće koriste za \nobavljanje gospodarske djelatnosti ne mogu biti korisnici sredstava Fonda. \n \n \n3 Sukladno članku 47. Zakona o zaštiti i očuvanju kulturnih dobara („Narodne novine“ broj145/24).",
+      "7 \n \n \nStupanj klasifikacije: SLUŽBENO \nPostupak prijave na Poziv u sustavu eFZOEU obuhvaća sljedeće korake: \n- unos osnovnih podataka, \n- učitavanje dokumentacije, \n- podnošenje prijave. \nPrijavu je moguće mijenjati i dopunjavati u sustavu eFZOEU do koraka podnošenja \nprijave. Nakon izvršenja koraka podnošenja prijave nije moguće mijenjati ni \ndopunjavati podnesenu prijavu, niti je moguće podnošenje nove prijave za istog \nprijavitelja. \nPo podnošenju prijave sustav eFZOEU automatski generira Potvrdu prijave 15. Na \nPotvrdi su prikazani svi podaci koje je prijavitelj unio u sustav, nazivi i veličine \ndokumenata koje je prijavitelj učitao, datum i vrijeme podnošenja prijave evidentirano na \nposlužitelju u sustavu eFZOEU."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 6,
+        "kategorija": "Financiranje i potpore"
+      },
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 2,
+        "kategorija": "Financiranje i potpore"
+      },
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 7,
+        "kategorija": "Financiranje i potpore"
+      }
+    ]
+  },
+  {
+    "id": "JPO-02",
+    "question": "Koji je minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25?",
+    "ground_truth": "Za sufinanciranje su prihvatljivi ugrađeni fotonaponski sunčani moduli stupnja korisnog djelovanja od najmanje 18%.",
+    "reference_context": "Za sufinanciranje su prihvatljive isključivo fotonaponske elektrane koje su ugrađene u periodu od 1. siječnja 2024. godine do 31. prosinca 2024. godine i puštene u pogon u periodu od 1. siječnja 2024. godine do 6. lipnja 2025. godine, stupnja korisnog djelovanja ugrađenih fotonaponskih sunčanih modula najmanje 18%.",
+    "document": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+    "category": "Financiranje i potpore",
+    "generated_answer": "Minimalni stupanj korisnog djelovanja fotonaponskih sunčanih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25 je najmanje 18%.\n\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 1]",
+    "retrieved_contexts": [
+      "neprihvatljivima \n7 Zamjena i/ili proširenje postojeće fotonaponske elektrane nije predmet sufinanciranja po ovom Pozivu.",
+      "JAVNI POZIV \nZA POTICANJE UGRADNJE FOTONAPONSKIH ELEKTRANA \nU OBITELJSKIM KUĆAMA \n(EnU-6/25) \n \nI. Predmet Javnog poziva \nPredmet Javnog poziva za poticanje ugradnje fotonaponskih elektrana u obiteljskim \nkućama (EnU-6/25) (u daljnjem tekstu: Poziv) je neposredno sufinanciranje projekata \nugradnje fotonaponskih elektrana za proizvodnju električne energije za vlastitu potrošnju \n(u daljnjem tekstu: Projekt) u postojećim obiteljskim kućama. \nFotonaponske elektrane mogu biti postavljene na postojeće obiteljske kuće ili na \npostojeće pomoćne građevine uz obiteljsku kuću. \nZa sufinanciranje su prihvatljive isključivo fotonaponske elektrane koje su \nugrađene1 u periodu od 1. siječnja 2024. godine do 31. prosinca 2024. godine i",
+      "ugrađene1 u periodu od 1. siječnja 2024. godine do 31. prosinca 2024. godine i \npuštene u pogon2 u periodu od 1. siječnja 2024. godine do 6. lipnja 2025. godine, \nstupnja korisnog djelovanja ugrađenih fotonaponskih sunčanih modula najmanje 18%. \n \n \n1 Danom ugradnje smatra se dan izdavanja računa za izvedene radove. \n2 Puštanjem u pogon smatra se dan izdavanja Potvrde za trajni pogon kojom operator distribucijskog \nsustava potvrđuje da su postrojenje i instalacija prijavitelja – korisnika mreže ispunili uvjete za trajni \npogon s mrežom, pod uvjetima definiranim u sklopljenom ugovoru o korištenju mreže ."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 3,
+        "kategorija": "Financiranje i potpore"
+      },
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 1,
+        "kategorija": "Financiranje i potpore"
+      }
+    ]
+  },
+  {
+    "id": "JPO-03",
+    "question": "Koji je iznos potpore po kW i maksimalni udio sufinanciranja opravdanih troškova prema Javnom pozivu EnU-6/25?",
+    "ground_truth": "Sredstva se dodjeljuju u visini od 600 eura po kW nazivne snage ugrađene fotonaponske elektrane, a najviše do 50% opravdanih troškova Projekta.",
+    "reference_context": "Ukupno raspoloživ iznos sredstava Fonda po ovom Pozivu je 7.500.000,00 eura. Sredstva se dodjeljuju u visini od 600 eura po kW nazivne snage ugrađene fotonaponske elektrane, a najviše do 50% opravdanih troškova Projekta.",
+    "document": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+    "category": "Financiranje i potpore",
+    "generated_answer": "Na temelju priloženog konteksta, nema informacija o iznosu potpore po kW ili maksimalnom udaju sufinanciranja opravdanih troškova u okviru javnog natčaja EnU-6/25. Kontekst se odnosi na zakonske propise i postupke ishođenja dozvole za izgradnju proizvodnih postrojenja iz obnovljivih izvora energije, uključujući ZOC i TP ugovore, te pravna pitanja vezana uz zajednice obnovljive energije.\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljivih izvora energije - Električna energija], str. 93; [Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji], str. 50-54\n",
+    "retrieved_contexts": [
+      "električne energije zajamčenom otkupnom cijenom  (ZOC) ili Ugovora o tržišnoj premiji  \n(TP). Kod ugovora o TP sa HROTE -om proizvođač prodaje energiju na tržištu , a HROTE ga \n \n111 Narodne novine, broj 28/23",
+      "registracije i licenciranja, i mrežnim naknadama koje odražavaju troškove, kao i relevantnim naknadama, nametima i\nporezima, osiguravajući pritom odgovarajući, pravedan i uravnotežen doprinos raspodjeli ukupnih troškova sustava u\nskladu s transparentnom analizom troškova i koristi distribuiranih izvora energije koju provode nadležna tijela\n5. prema zajednicama obnovljive energije ne postupa se na diskriminirajući način u pogledu njihovih aktivnosti, prava\ni obveza kao krajnjih kupaca, proizvođača, opskrbljivača, operatora distribucijskih sustava ili kao drugih sudionika na\ntržištu\n6. sudjelovanje u zajednicama obnovljive energije dostupno je svim potrošačima, uključujući one u kućanstvima s\nniskim prihodima ili ranjivim kućanstvima",
+      "– da poduzetnik nije u poteškoćama sukladno posebnim propisima\n– da poduzetnik nema duga ili nepodmirenog duga temeljem odluke Europske komisije o nezakonitosti ili nespojivosti\npotpore s unutarnjim tržištem.\n(8) Operator tržišta energije dužan je na svojim mrežnim stranicama javno objaviti popis poduzetnika koji plaćaju\numanjenu naknadu za obnovljive izvore energije i kogeneracije i dostaviti ga Ministarstvu.\n(9) Operator tržišta energije dužan je najmanje jednom godišnje, najkasnije do 31. ožujka tekuće godine, podnijeti\nMinistarstvu i Agenciji, za prethodnu godinu, izvješće o prikupljanju, obračunu i razdiobi sredstava za isplatu poticaja\niz članka 29. ovoga Zakona te o provedbi svojih obveza utvrđenih ovim Zakonom."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "stranica": 93,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 54,
+        "kategorija": "Obnovljivi izvori energije"
+      },
+      {
+        "naziv_dokumenta": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "stranica": 50,
+        "kategorija": "Obnovljivi izvori energije"
+      }
+    ]
+  },
+  {
+    "id": "JPO-04",
+    "question": "U kojem roku i na koji način Fond isplaćuje odobrena sredstva korisniku prema Javnom pozivu EnU-6/25?",
+    "ground_truth": "Fond odobrena sredstva isplaćuje jednokratno na IBAN korisnika, u roku od 30 dana od dana stupanja na snagu Odluke o odabiru korisnika i dodjeli sredstava.",
+    "reference_context": "Odobrena sredstva Fond će isplatiti jednokratno na IBAN korisnika, u roku od 30 dana od dana stupanja na snagu Odluke.",
+    "document": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+    "category": "Financiranje i potpore",
+    "generated_answer": "Odobrena sredstva Fond će isplatiti jednokratno na IBAN korisnika, u roku od 30 dana od dana stupanja na snagu Odluke.\n\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 8 [NEAKTIVAN / rok istekao]]",
+    "retrieved_contexts": [
+      "Ugovor o sufinanciranju ugradnje fotonaponske elektrane smatra se sklopljenim. \nFond će Odluku dostaviti korisniku preporučenom poštom s povratnicom. \nOdobrena sredstva Fond će isplatiti jednokratno na IBAN korisnika, u roku od 30 dana od \ndana stupanja na snagu Odluke. \nIznimno, u slučaju kada prijavu u ime maloljetne osobe ili osobe lišene poslovne \nsposobnosti podnosi zakonski zastupnik ili skrbnik, Fond će odobrena sredstva isplatiti \nKorisniku u roku 30 dana od dostave cjelovite dokumentacije prema uvjetima iz Odluke. \nKorisnik je u obvezi osigurati Fondu obavljanje kontrole na licu mjesta i pregled \ncjelokupne dokumentacije kao i osigurati da predmet sufinanciranja ostane u funkciji \ndvije godine od datuma Odluke. Fond u navedenom razdoblju pridržava pravo provedbe",
+      "dvije godine od datuma Odluke. Fond u navedenom razdoblju pridržava pravo provedbe \nkontrole navedenog uvjeta. U slučaju da korisnik ne omogući Fondu provedbu kontrole na \nlicu mjesta ili se kontrolom utvrdi nepridržavanje navedenog uvjeta od strane korisnika, \nFond pokreće postupak povrata cjelokupnog iznosa isplaćenih bespovratnih sredstava, \nuvećanog za zakonske zatezne kamate. \nU slučaju smrti Prijavitelja nakon podnošenja prijave na Poziv , nasljednici koji imaju \nnamjeru nastaviti s provedbom prijave  dužni su o istome obavijestiti Fond te dostaviti \nFondu pravomoćno rješenje o nasljeđivanju , smrtni list i z emljišno-knjižni izvadak \nnekretnine kojim potvrđuje da je novi vlasnik/suvlasnik nekretnine. Na poziv Fonda dužni \nsu dostaviti i drugu odgovarajuću dokumentaciju.",
+      "Od prijavitelja koji je dostavio svu obveznu dokumentaciju Fond može zatražiti \npojašnjenje elektroničkom poštom putem adrese pojasnjenja@fzoeu.hr. Traženje \npojašnjenja ne utječe na redoslijed zaprimanja prijave. U slučaju nedostavljanja \npojašnjenja u zadanom roku, smatra se da je prijavitelj odustao od prijave te se ona \ndalje ne razmatra. \nFond ne razmatra prijave: \n- koje su dostavljene prije službene objave Poziva, \n- koje su dostavljene nakon isteka kalendarskog roka za dostavu prijave po Pozivu \nodnosno nakon objave na mrežnim stranicama Fonda o iskorištenosti predviđenih \nsredstava za Poziv, \n- koje su dostavljene na način koji nije određen Pozivom, \n- koje su dostavljene od prijavitelja koji Pozivom nisu određeni kao korisnici \nsredstava Fonda, \n- koje nisu predmet Poziva."
+    ],
+    "sources_meta": [
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 8,
+        "kategorija": "Financiranje i potpore"
+      },
+      {
+        "naziv_dokumenta": "Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25)",
+        "stranica": 7,
+        "kategorija": "Financiranje i potpore"
+      }
+    ]
+  }
+]

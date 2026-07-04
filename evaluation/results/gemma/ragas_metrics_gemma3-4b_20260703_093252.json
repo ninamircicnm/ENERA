@@ -1,0 +1,8 @@
+{
+  "timestamp": "gemma3-4b_20260703_093252",
+  "n_pitanja": 20,
+  "answer_relevancy": 0.254,
+  "faithfulness": 0.8658,
+  "context_precision": 0.5333,
+  "context_recall": 0.8667
+}
