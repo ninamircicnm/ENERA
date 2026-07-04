@@ -12,7 +12,7 @@ def ucitaj_sliku_b64(naziv: str) -> str:
 # Konfiguracija stranice
 st.set_page_config(
     page_title="ENERA — Energetski Ekspert i RAG Asistent",
-    page_icon=Path(__file__).parent / "assets" / "logo.jpg",
+    page_icon=Path(__file__).parent / "assets" / "novi_logo.JPG",
     layout="centered",
 )
 
@@ -276,10 +276,10 @@ if upit:
 # Sidebar
 with st.sidebar:
     try:
-        ikona_b64 = ucitaj_sliku_b64("ikona.jpg")
+        novi_logo_b64 = ucitaj_sliku_b64("novi_logo.jpeg")
         st.markdown(
             f'<div class="sidebar-logo">'
-            f'<img src="data:image/jpeg;base64,{ikona_b64}" '
+            f'<img src="data:image/jpeg;base64,{novi_logo_b64}" '
             f'width="90" style="border-radius:14px;"></div>',
             unsafe_allow_html=True
         )
