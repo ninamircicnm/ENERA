@@ -1,0 +1,155 @@
+{
+  "repeated_query_test": [
+    {
+      "id": "ZOI-01",
+      "question": "Koji je nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine?",
+      "odgovori": [
+        " Nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine je postizanje zacrtanog udjela obnovljive energije u konačnoj brutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije, kao što je definirano u Integriranom nacionalnom energetskom i klimatskom planu za Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (NECP).\nIzvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 9.",
+        " Nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine je postizanje zacrtanog udjela obnovljive energije u konačnoj brutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije, kao što je definirano u Integriranom nacionalnom energetskom i klimatskom planu za Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (NECP).\nIzvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 9",
+        " Nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine je postizanje zacrtanog udjela obnovljive energije u konačnoj brutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije, kao što je definirano u Integriranom nacionalnom energetskom i klimatskom planu za Republiku Hrvatsku za razdoblje od 2021. do 2030. godine (NECP).\nIzvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 9",
+        " Nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine je postizanje zacrtanog udjela obnovljive energije u konačnoj brutopotrošnji energije u promatranom desetogodišnjem razdoblju u dimenziji dekarbonizacije, kako se to odnosi na određivanje indikativne putanje za povećanje obnovljive energije.\n\nIzvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 9 (dva puta)"
+      ],
+      "n_odbijanja": 0,
+      "n_gresaka": 0,
+      "n_ukupno": 4,
+      "konzistentnost": "STABILNO"
+    },
+    {
+      "id": "PRI-03",
+      "question": "Kako funkcionira model samoopskrbe (vlastita potrošnja) za sunčane elektrane i kako se obračunavaju viškovi proizvedene energije?",
+      "odgovori": [
+        " Model samoopskrbe (vlastita potrošnja) za solarnu elektranu funkcionira tako da se električna energija proizvedena iz vlastite elektrane koristi prvo za zadovoljenje vlastitih potreba kupca. Ako je proizvodnja veća od trenutačne potrošnje kupca i ako nema prekomjernog surplusa, energija se predaje u elektroenergetsku mrežu (Izvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90).\n\nU slučaju da su troškovi izgradnje i proizvodnje vlastite elektrane niži od maloprodajne cijene električne energije kupljene od opskrbljivača, isplativa je.\n\nUkoliko se stvaraju viškovi proizvedene energije, oni se ne obračunavaju naknadama i pristojbama (Izvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53).\n\nCilj modela proizvodnje za vlastite potrebe je maksimalna pokrivenost vlastitih potreba za električnom energijom uz minimalne viškove proizvodnje i minimalan utjecaj na mrežu.",
+        " Model samoopskrbe (vlastita potrošnja) za sunčane elektrane funkcionira tako da se električna energija proizvedena iz vlastite elektrane koristi prvo za zadovoljenje vlastitih potreba kupca. Ako je proizvodnja veća od trenutačne potrošnje, preostali višak se predaje u elektroenergetsku mrežu (Izvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90). Ako je proizvodnja manja od trenutačne potrošnje ili nema proizvodnje, električna energija se preuzima iz mreže (Izvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90).\n\nViškovi proizvedene energije se obračunavaju na temelju elektroenergetskih suglasnošću i ugovora o korištenju mreže (Izvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90). Ako su troškovi njene izgradnje i proizvodnje niži od maloprodajne cijene električne energije kupljene od opskrbljivača, onda se isplativa (Izvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90).\n\nZakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji navodi da prilikom određivanja tarifnih modela i tarifne stavke koja regulira naknadu za potrebu prijenosa i distribucije električne energije, Agencija ili operatori sustava dužni su odrediti naknade za korištenje prijenosne i distribucijske mreže za krajnje kupce s vlastitom proizvodnjom električne energije ili korisnika postrojenja za samoopskrbu tako da odražavaju stvarne troškove te da su razmjerne i nediskriminirujuće (Izvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53). Za proizvodnju električne energije koja se koristi za vlastitu potrošnju kod krajnjih kupaca s vlastitom proizvodnjom električne energije ili korisnika postrojenja za samoopskrbu ne obračunavaju se naknade i pristojbe (Izvor: Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53).",
+        " Model samoopskrbe (vlastita potrošnja) za sunčane elektrane funkcionira tako da se električna energija proizvedena iz vlastite elektrane koristi prvo za zadovoljenje vlastitih potreba kupca, a preostatak se predaje u elektroenergetsku mrežu. U slučaju da su troškovi njene izgradnje i proizvodnje niži od maloprodajne cijene električne energije kupljene od opskrbljivača, ona je isplativa.\n\nKako bi se obračunali viškovi proizvedene energije, potrebno je definirati elektroenergetsku suglasnošću i ugovorom o korištenju mreže između kupca i operatora mreže. Ugovorom o opskrbi/otkupu se određuje cijena proizvedene energije koja je isplativa ako su troškovi njene izgradnje i proizvodnje niži od maloprodajne cijene električne energije kupljene od opskrbljivača.\n\nU slučaju da se preostali višak ne može predati u mrežu, on se može čuvati ili prodati drugim korisnicima.\n\nIzvor: [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90], [Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53]",
+        " Model samoopskrbe (vlastita potrošnja) za sunčane elektrane funkcionira tako da se električna energija proizvedena iz vlastite elektrane koristi prvo za zadovoljenje vlastitih potreba kupca. Ako je proizvodnja veća od trenutačne potrošnje kupca i ako nema prekomjernog proizvoda, energija se predaje u elektroenergetsku mrežu (Električna energija - Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije, str. 90).\n\nU slučaju da su troškovi izgradnje i proizvodnje vlastite elektrane niži od maloprodajne cijene električne energije kupljene od opskrbljivača, tada se isplativa.\n\nUz to, prilikom određivanja tarifnih modela i tarifne stavke za naknadu prijenosa i distribucije električne energije, Agencija ili operatori sustava dužni su odrediti naknade za korištenje prijenosne i distribucijske mreže za krajnje kupce s vlastitom proizvodnjom električne energije ili korisnika postrojenja za samoopskrbu tako da odražavaju stvarne troškove te da su razmjerne i nediskriminirajuće (Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53).\n\nViškovi proizvedene energije se obračunavaju na temelju stvarnih troškova te su razmjerne i nediskriminirajuće. Za proizvodnju električne energije koja se koristi za vlastitu potrošnju kod krajnjih kupaca s vlastitom proizvodnjom električne energije ili korisnika postrojenja za samoopskrbu ne obračunavaju se naknade i pristojbe (Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53).\n\nIzvori:\n- Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 90\n- Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 53"
+      ],
+      "n_odbijanja": 0,
+      "n_gresaka": 0,
+      "n_ukupno": 4,
+      "konzistentnost": "STABILNO"
+    },
+    {
+      "id": "MET-03",
+      "question": "Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021?",
+      "odgovori": [
+        " U Metodologiji provođenja energetskog pregleda zgrada 2021, koje mjere povećanja energetske učinkovitosti obuhvaćaju građevinska (vanjska) ovojnica zgrade nisu izričito navode. Međutim, u članku 6.1.3 se navode mjere povećanja energetske učinkovitosti kod sustava grijanja i pripreme potrošne tople vode (PTV), a među njima su i mjere koje koriste alternativne/obnovljive izvore energije, poput biomase, energije Sunčevog zračenja, geotermalne energije, kogeneracije/trigeneracije. Zato se može zaključiti da mjere povećanja energetske učinkovitosti građevinske ovojnice mogu obuhvatiti i mjere koje koriste alternativne/obnovljive izvore energije.\n\nIzvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 198; Metodologija provođenja energetskog pregleda zgrada 2021, str. 2; Metodologija provođenja energetskog pregleda zgrada 2021, str. 192",
+        " Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021 nisu eksplicitno navedene. Međutim, prema opisanoj metodologiji, mjere povećanja energetske učinkovitosti se razvrstavaju po termotehničkim sustavima, a među tim sustavima nije spomenuta građevinska ovojnica. Međutim, možemo zaključiti da bi mjere povećanja energetske učinkovitosti građevinske ovojnice mogli biti usmjerene na poboljšanje izolacije i termičkog preključivanja, kao i na uporabu alternativnih/obnovljivih izvora energije (npr. Sunčevo zračenje ili geotermalna energija).\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021], str. 198, 2, 192",
+        " Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021 nisu izričito navedene. Međutim, u odnosu na termotehnički sustavi, mjere povećanja energetske učinkovitosti obuhvaćaju korištenje alternativnih/obnovljivih izvora energije (biomasa, energija Sunčevog zračenja, geotermalna energija), kogeneraciju/trigeneraciju te zamjenu ekološki neprihvatljivog energenta s ekološki prihvatljivim energendentom (manja emisija CO2 u okoliš). Izvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 198\n\nUz to, općenito postoje dvije vrste mjera povećanja energetske učinkovitosti: mjere energetske učinkovitosti i mjere sa ciljem zadovoljavanja minimalnih propisnih tehničkih uvjeta. Izvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 192\n\nUz to, svrha energetskog pregleda je analiza stanja i mogućnosti primjene mjera poboljšanja energetskih svojstava zgrade i poboljšanja energetske učinkovitosti u skladu s realnim uvjetima eksploatacije i uporabe zgrade, te prikupljanje svih potrebnih podataka i informacija o zgradama za provođenje postupka energetskog certificiranja zgrade i određivanja energetskog razreda zgrade u propisanim referentnim klimatskim podacima prema Algoritmu. Izvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 2\n\nUz to, ovom Metodologijom provođenja energetskog pregleda zgrada (u daljnjem tekstu: Metodologija) utvrđuje se provedba energetskih pregleda koja je propisana najnovijim Pravilnikom o energetskom pregledu zgrade i energetskom certificiranju (u daljnjem tekstu: Pravilnik), kojim se... Izvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 192",
+        " Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021 nisu eksplicitno navedene. Međutim, prema opisanoj metodologiji, mjere povećanja energetske učinkovitosti se razvrstavaju po termotehničkim sustavima, a među tim sustavima nije spomenuta građevinska ovojnica. Međutim, moguće je da su mjere povezane s ovojnicom uključene kao dio drugih termotehničkih sustava (npr. kao dio fasade ili zatvarača).\n\nIzvor: [Metodologija provođenja energetskog pregleda zgrada 2021], str. 198, 192"
+      ],
+      "n_odbijanja": 0,
+      "n_gresaka": 0,
+      "n_ukupno": 4,
+      "konzistentnost": "STABILNO"
+    },
+    {
+      "id": "VEN-01",
+      "question": "Koje uvjete moraju ispunjavati tehnička svojstva sustava ventilacije prema Tehničkom propisu o sustavima ventilacije?",
+      "odgovori": [
+        " Prema Tehničkom propisu o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada (str. 8), tehnička svojstva sustava ventilacije moraju biti takva da tijekom trajanja zgrade u kojoj su ugrađeni ispune sve uvjete iz stavka 1. ovoga članka, što uključuje:\n\n1. Svi uvjeti iz stavka 1. članka propisa (nije navedeno što točno su ti uvjeti).\n2. Osiguranje zadovoljavajućih toplinskih uvjeta u zgradi uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom.\n\nIzvor: Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 8",
+        " Prema Tehničkom propisu o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada (str. 8), tehnička svojstva sustava ventilacije moraju ispunjavati sljedeće uvjete:\n\n1. Ispune sve uvjete iz stavka 1. ovoga članka propisa, što znači da mora biti osigurana noćni mir i zadovoljavajući uvjeti za odmor i rad te da se sustavima spriječi širenje buke između pojedinih prostora u zgradi.\n2. Osiguraju zadovoljavajuće toplinske uvjete u zgradi uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom.\n\nIzvor: Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 8",
+        " Prema Tehničkom propisu o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada (str. 8), tehnička svojstva sustava ventilacije moraju ispunjavati sljedeće uvjete:\n\n1. Ispune sve uvjete iz stavka 1. ovoga članka, što znači da mora biti osigurana noćni mir i zadovoljavajući uvjeti za odmor i rad te da se sustavima spriječi širenje buke između pojedinih prostora u zgradi.\n2. Osiguraju zadovoljavajuće toplinske uvjete u zgradi uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom (stavak 2.).\n\nIzvor: Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 8",
+        " Prema Tehničkom propisu o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada (str. 8), tehnička svojstva sustava ventilacije moraju biti takva da tijekom trajanja zgrade u kojoj su ugrađeni ispune sve uvjete iz stavka 1. ovoga članka, što uključuje:\n\n1. osiguranje noćnog mira i zadovoljavajućih uvjeta za odmor i rad;\n2. sprečavanje širenja buke između pojedinih prostora u zgradi.\n\nU stavku 2. ovoga članka se navele dodatna tehnička svojstva koja moraju biti ispunjena tako da sustavi ventilacije podnesu sve utjecaje uobičajene uporabe i utjecaje okoliša, a to uključuje:\n\n1. ispunjavanje svih uvjeta iz stavka 1. ovoga članka;\n2. osiguravanje zadovoljavajućih toplinskih uvjeta u zgradi uz potrošnju energije jednaku ili nižu od potrošnje određene posebnim propisom.\n\nTehnička svojstva iz stavaka 1. i 2. ovoga članka postižu se projektiranjem i izvođenjem sustava u skladu s odredbama ovoga propisa (str. 8).\nIzvor: Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 6, 8\n\nU slučaju da je izvorište označeno kao [NEAKTIVAN / rok istekao], upozoriti korisnika na to da taj natječaj ili dokument više nije na snazi te da navedene uvjete i rokove treba provjeriti u aktualnoj verziji.\nIzvor: Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada, str. 6, 8 (NEAKTIVAN / rok istekao)"
+      ],
+      "n_odbijanja": 1,
+      "n_gresaka": 0,
+      "n_ukupno": 4,
+      "konzistentnost": "NESTABILNO"
+    },
+    {
+      "id": "JPO-02",
+      "question": "Koji je minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25?",
+      "odgovori": [
+        " Minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25 mora biti najmanje 18%.\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 1]",
+        " Minimalni stupanj korisnog djelovanja fotonaponskih sunčanih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25 mora biti najmanje 18%.\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 1]",
+        " Minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25 mora biti najmanje 18%.\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 1]",
+        " Minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25 mora biti najmanje 18%.\nIzvor: [Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 1]"
+      ],
+      "n_odbijanja": 0,
+      "n_gresaka": 0,
+      "n_ukupno": 4,
+      "konzistentnost": "STABILNO"
+    }
+  ],
+  "selfcheck_analiza": [
+    {
+      "id": "ZOI-01",
+      "question": "Koji je nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine?",
+      "rizik_halucinacije": "NIZAK",
+      "cv_duljine": 0.05,
+      "varijabilnost_duljine": "UJEDNAČENO",
+      "rizik_ukupni": "NIZAK",
+      "obrazlozenje": "Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [508, 507, 507, 458] znakova | CV=0.05 → ujednačeno"
+    },
+    {
+      "id": "PRI-03",
+      "question": "Kako funkcionira model samoopskrbe (vlastita potrošnja) za sunčane elektrane i kako se obračunavaju viškovi proizvedene energije?",
+      "rizik_halucinacije": "NIZAK",
+      "cv_duljine": 0.363,
+      "varijabilnost_duljine": "VARIJABILNO",
+      "rizik_ukupni": "VISOK",
+      "obrazlozenje": "Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [990, 2126, 1096, 1749] znakova | CV=0.36 → varijabilno (>0.25)"
+    },
+    {
+      "id": "MET-03",
+      "question": "Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021?",
+      "rizik_halucinacije": "NIZAK",
+      "cv_duljine": 0.546,
+      "varijabilnost_duljine": "VARIJABILNO",
+      "rizik_ukupni": "VISOK",
+      "obrazlozenje": "Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [858, 689, 1701, 545] znakova | CV=0.55 → varijabilno (>0.25)"
+    },
+    {
+      "id": "VEN-01",
+      "question": "Koje uvjete moraju ispunjavati tehnička svojstva sustava ventilacije prema Tehničkom propisu o sustavima ventilacije?",
+      "rizik_halucinacije": "VISOK",
+      "cv_duljine": 0.467,
+      "varijabilnost_duljine": "VARIJABILNO",
+      "rizik_ukupni": "VISOK",
+      "obrazlozenje": "1/4 pokušaja rezultiralo odbijanjem — mješoviti ishod ukazuje na nestabilnost modela. Duljine odgovora: [596, 638, 642, 1385] znakova | CV=0.47 → varijabilno (>0.25)"
+    },
+    {
+      "id": "JPO-02",
+      "question": "Koji je minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25?",
+      "rizik_halucinacije": "NIZAK",
+      "cv_duljine": 0.018,
+      "varijabilnost_duljine": "UJEDNAČENO",
+      "rizik_ukupni": "NIZAK",
+      "obrazlozenje": "Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [252, 261, 252, 252] znakova | CV=0.02 → ujednačeno"
+    }
+  ],
+  "out_of_domain_test": [
+    {
+      "id": "OOD-01",
+      "question": "Koji su porezni propisi za isplatu dividende dioničarima u Hrvatskoj?",
+      "razlog_izvan_domene": "Porezno pravo nije pokriveno domenskim dokumentima",
+      "odgovor": " U Hrvatskoj, porezi na dividende dioničarima reguliraju se Zakonom o porezima na dohodek fizičkih osoba (ZDDPO) i Zakonom o porezima na dohodek pravnih osoba (ZPDPP).\n\nIzvor: Zakon o porezima na dohodek fizičkih osoba, str. 137-140; Zakon o porezima na dohodek pravnih osoba, str. 265-289\n\nUz to, u slučaju građana koji koriste veći dio obiteljske kuće za gospodarsku djelatnost, oni ne mogu biti korisnici sredstava Fonda za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama.\n\nIzvor: Javni poziv za poticanje ugradnje fotonaponskih elektrana u obiteljskim kućama (EnU-6/25), str. 3 [NEAKTIVAN / rok istekao]",
+      "ispravno_odbijeno": false,
+      "je_greska": false
+    },
+    {
+      "id": "OOD-02",
+      "question": "Kako instalirati solarne panele na jedrilici za pogon motora?",
+      "razlog_izvan_domene": "Pomorska/brodska primjena nije tema dokumenata",
+      "odgovor": " Uzimajući u obzir kontekst, potrebno je prikupiti sljedeće podatke tijekom provedbe energetskog pregleda centralnog sustava hlađenja neke zgrade pomoću kompresijskih rashladnih uređaja pogonjenih električnim motorom:\n\n1. Prostor koji se hladi / interni naziv\n2. Proizvođač i tip (model) rashladnika\n3. Godina ugradnje/proizvodnje rashladnika\n4. Rashladna snaga [kW]\n5. Električna snaga [kW]\n6. Faktor hlađenja EER prema podacima proizvođača [-]\n7. Sezonski faktor hlađenja SEER prema podacima proizvođača [-]\n8. Radna tvar\n\nIzvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 41\n\nUzimajući u obzir kontekst, navedene su neke načine uštede energije:\n\n1. Ugraditi jeftine sedmodnevne tajmere da automatski gase printere tokom noći i vikendima.\n2. Investirati u energetski učinkovitu uredsku opremu.\n3. Kupovina laptopa prilikom zamjene starih računala.\n4. Korištenje LCD monitora.\n\nIzvor: Metodologija provođenja energetskog pregleda zgrada 2021, str. 195\n\nUzimajući u obzir kontekst, navedeni je postupak za dobivanje dozvole za izgradnju proizvodnog postrojenja iz obnovljive energije:\n\n1. Obavljanje djelatnosti proizvodnje električne energije korištenjem proizvodnih postrojenja čiji je zbroj instaliranih snaga do uključivo 500 kW.\n\nIzvor: Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 88",
+      "ispravno_odbijeno": false,
+      "je_greska": false
+    },
+    {
+      "id": "OOD-03",
+      "question": "Kolika je trenutna burzovna cijena električne energije na HUPX-u danas?",
+      "razlog_izvan_domene": "Sustav nema pristup live tržišnim podacima, samo statičkim dokumentima",
+      "odgovor": " U ovom kontekstu nisu dani podaci o trenutnoj burzovnoj cijeni električne energije na HUPX-u. Burzovna cijena se mijenja u realnom vremenu i ne može se odrediti samo prema ovim dokumentima. Da bi se dobila informacija o trenutnoj burzovnoj cijeni, potrebno je pratiti HUPX-ov web stranicu ili druge vrijedne izvore za energiju u Republici Hrvatskoj.\nIzvor: [Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji, str. 7], [Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija, str. 86], [Metodologija provođenja energetskog pregleda zgrada 2021, str. 199]",
+      "ispravno_odbijeno": false,
+      "je_greska": false
+    },
+    {
+      "id": "OOD-04",
+      "question": "Koji je najbolji recept za mafine?",
+      "razlog_izvan_domene": "Potpuno izvan domene — kontrolno pitanje",
+      "odgovor": " Najbolji recept za mafine nije naveden u kontekstu domenskih dokumenata vezanih uz obnovljive izvore energije u Republici Hrvatskoj.\n\nIzvor: Nije dostupan, jer se ne odnosi na temu obnovljivih izvora energije.",
+      "ispravno_odbijeno": true,
+      "je_greska": false
+    }
+  ]
+}

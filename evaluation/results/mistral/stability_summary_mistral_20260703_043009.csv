@@ -1,0 +1,15 @@
+Tip testa,ID,Pitanje,Rezultat,Detalj
+Repeated query,ZOI-01,Koji je nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine?,STABILNO,0/4 odbijanja
+Repeated query,PRI-03,Kako funkcionira model samoopskrbe (vlastita potrošnja) za sunčane elektrane i kako se obračunavaju viškovi proizvedene energije?,STABILNO,0/4 odbijanja
+Repeated query,MET-03,Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021?,STABILNO,0/4 odbijanja
+Repeated query,VEN-01,Koje uvjete moraju ispunjavati tehnička svojstva sustava ventilacije prema Tehničkom propisu o sustavima ventilacije?,NESTABILNO,1/4 odbijanja
+Repeated query,JPO-02,Koji je minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25?,STABILNO,0/4 odbijanja
+SelfCheck rizik,ZOI-01,Koji je nacionalni cilj udjela obnovljivih izvora energije u ukupnoj potrošnji energije u Republici Hrvatskoj do 2030. godine?,NIZAK,"Tip=NIZAK | CV=0.050 Duljina=UJEDNAČENO | Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [508, 507, 507, 458] znakova | CV=0.05 → ujednačeno"
+SelfCheck rizik,PRI-03,Kako funkcionira model samoopskrbe (vlastita potrošnja) za sunčane elektrane i kako se obračunavaju viškovi proizvedene energije?,VISOK,"Tip=NIZAK | CV=0.363 Duljina=VARIJABILNO | Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [990, 2126, 1096, 1749] znakova | CV=0.36 → varijabilno (>0.25)"
+SelfCheck rizik,MET-03,Koje mjere povećanja energetske učinkovitosti obuhvaća građevinska (vanjska) ovojnica zgrade prema Metodologiji 2021?,VISOK,"Tip=NIZAK | CV=0.546 Duljina=VARIJABILNO | Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [858, 689, 1701, 545] znakova | CV=0.55 → varijabilno (>0.25)"
+SelfCheck rizik,VEN-01,Koje uvjete moraju ispunjavati tehnička svojstva sustava ventilacije prema Tehničkom propisu o sustavima ventilacije?,VISOK,"Tip=VISOK | CV=0.467 Duljina=VARIJABILNO | 1/4 pokušaja rezultiralo odbijanjem — mješoviti ishod ukazuje na nestabilnost modela. Duljine odgovora: [596, 638, 642, 1385] znakova | CV=0.47 → varijabilno (>0.25)"
+SelfCheck rizik,JPO-02,Koji je minimalni stupanj korisnog djelovanja fotonaponskih modula za prihvatljivost sufinanciranja prema Javnom pozivu EnU-6/25?,NIZAK,"Tip=NIZAK | CV=0.018 Duljina=UJEDNAČENO | Svi pokušaji (4/4) dali dosljedan tip odgovora. Duljine odgovora: [252, 261, 252, 252] znakova | CV=0.02 → ujednačeno"
+Out-of-domain,OOD-01,Koji su porezni propisi za isplatu dividende dioničarima u Hrvatskoj?,PROPUST,Porezno pravo nije pokriveno domenskim dokumentima
+Out-of-domain,OOD-02,Kako instalirati solarne panele na jedrilici za pogon motora?,PROPUST,Pomorska/brodska primjena nije tema dokumenata
+Out-of-domain,OOD-03,Kolika je trenutna burzovna cijena električne energije na HUPX-u danas?,PROPUST,"Sustav nema pristup live tržišnim podacima, samo statičkim dokumentima"
+Out-of-domain,OOD-04,Koji je najbolji recept za mafine?,ISPRAVNO,Potpuno izvan domene — kontrolno pitanje
