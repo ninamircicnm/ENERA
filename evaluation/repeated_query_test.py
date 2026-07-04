@@ -38,12 +38,14 @@ from datetime import datetime
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from backend.rag_pipeline import get_answer_with_sources
+from backend.rag_pipeline import get_answer_with_sources, GENERATOR_MODEL
 from evaluation.eval_dataset import EVAL_DATASET
 
 # Konfiguracija testa 
 
 N_PONAVLJANJA = 4
+
+MODEL_TAG = GENERATOR_MODEL.replace(":", "-")
 
 # Podskup pitanja za repeated query test — po jedno iz svake kategorije je dovoljno za prototip 
 # # ID-evi se referenciraju na EVAL_DATASET
@@ -92,9 +94,22 @@ ODBIJANJE_OKIDACI = [
     "kontekst se fokusira",
     "dokumentacija se odnosi",
     "dokumentacija se fokusira",
+    #Fraze koje Mistral stvarno koristi (utvrđeno OOD testom)
+    "nije naveden",
+    "nisu navedeni",
+    "ne može odgovoriti",
+    "nisu dostupni podaci",
 ]
 
+def je_greska(odgovor: str) -> bool:
+    # Pipeline iznimke bilježe se kao "[GREŠKA: ...]" — to je infrastrukturni
+    # kvar, a NE odgovor modela, pa se mora razlikovati od odbijanja i odgovora.
+    return odgovor.startswith("[GREŠKA:")
+
+
 def je_odbijanje(odgovor: str) -> bool:
+    if je_greska(odgovor):
+        return False
     odgovor_lower = odgovor.lower()
     return any(okidac in odgovor_lower for okidac in ODBIJANJE_OKIDACI)
 
@@ -118,21 +133,31 @@ def pokreni_repeated_query_test(eval_dataset: list, odabrani_id: list, n: int) -
                 odgovor = f"[GREŠKA: {e}]"
             odgovori.append(odgovor)
             odbijen = je_odbijanje(odgovor)
-            print(f"  Pokušaj {i+1}/{n}: {'ODBIJANJE' if odbijen else 'ODGOVOR'} "
-                  f"({len(odgovor)} znakova)")
+            if je_greska(odgovor):
+                status = "GREŠKA"
+            elif odbijen:
+                status = "ODBIJANJE"
+            else:
+                status = "ODGOVOR"
+            print(f"  Pokušaj {i+1}/{n}: {status} ({len(odgovor)} znakova)")
 
         n_odbijanja = sum(1 for o in odgovori if je_odbijanje(o))
-        konzistentnost = "STABILNO" if n_odbijanja in (0, n) else "NESTABILNO"
+        n_gresaka = sum(1 for o in odgovori if je_greska(o))
+        # Stabilno = svi pokušaji istog ishoda. Greške se broje zajedno s
+        # odbijanjima jer ni jedno ni drugo nije "odgovor" → mješavina
+        # odgovora i grešaka/odbijanja signalizira nestabilnost.
+        konzistentnost = "STABILNO" if (n_odbijanja + n_gresaka) in (0, n) else "NESTABILNO"
 
         rezultati.append({
             "id": item["id"],
             "question": item["question"],
             "odgovori": odgovori,
             "n_odbijanja": n_odbijanja,
+            "n_gresaka": n_gresaka,
             "n_ukupno": n,
             "konzistentnost": konzistentnost,
         })
-        print(f"  >> {konzistentnost} ({n_odbijanja}/{n} odbijanja)")
+        print(f"  >> {konzistentnost} ({n_odbijanja}/{n} odbijanja, {n_gresaka}/{n} grešaka)")
 
     return rezultati
 
@@ -231,7 +256,13 @@ def pokreni_ood_test(ood_pitanja: list) -> list:
             odgovor = f"[GREŠKA: {e}]"
 
         odbijen = je_odbijanje(odgovor)
-        ishod = "ISPRAVNO ODBIJENO" if odbijen else "NIJE ODBIJENO (rizik halucinacije)"
+        greska = je_greska(odgovor)
+        if greska:
+            ishod = "GREŠKA (iznimka — nije evaluirano)"
+        elif odbijen:
+            ishod = "ISPRAVNO ODBIJENO"
+        else:
+            ishod = "NIJE ODBIJENO (rizik halucinacije)"
         print(f"  >> {ishod}")
 
         rezultati.append({
@@ -240,6 +271,7 @@ def pokreni_ood_test(ood_pitanja: list) -> list:
             "razlog_izvan_domene": item["razlog"],
             "odgovor": odgovor,
             "ispravno_odbijeno": odbijen,
+            "je_greska": greska,
         })
 
     return rezultati
@@ -249,7 +281,7 @@ def pokreni_ood_test(ood_pitanja: list) -> list:
 
 def spremi_rezultate(repeated, selfcheck, ood, output_dir: Path):
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp =  f"{MODEL_TAG}_" + datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # JSON s potpunim podacima (uključujući sve varijante odgovora)
     json_path = output_dir / f"stability_test_{timestamp}.json"
