@@ -2,15 +2,13 @@
 citation_check.py — Provjera točnosti citiranja izvora (Attribution Accuracy)
 
 Pokriva dimenziju "Utemeljenost i atribucija" iz evaluacijskog okvira
-(Strahonja & Oreški), konkretno metriku Attribution Accuracy koja u
-RAGAS-u nije pokrivena.
+(Strahonja & Oreški), konkretno metriku Attribution Accuracy koja u RAGAS-u nije pokrivena.
 
 Pristup je polu-automatski:
   1. Automatska provjera (programska) — je li format "Izvor: ..." prisutan
      u odgovoru, i poklapa li se barem jedan navedeni dokument s nekim od
      stvarno dohvaćenih izvora (sources_meta) za to pitanje.
-  2. Ručna ocjena (popunjava se naknadno, npr. od strane domenskog
-     stručnjaka ili same studentice) — je li navedena stranica zaista
+  2. Ručna ocjena (popunjava se naknadno) — je li navedena stranica zaista
      sadržajno točna, ne samo formalno prisutna.
 
 Korištenje (iz korijena projekta, s aktivnim venv):
@@ -40,8 +38,7 @@ CITATION_RUBRIC = {
 }
 
 # Regex za prepoznavanje formata "Izvor: [naziv], str. [broj]" iz system prompta
-IZVOR_PATTERN = re.compile(r"Izvor:\s*(.+?),?\s*str\.?\s*([\w\-–]+)", re.IGNORECASE)
-
+IZVOR_PATTERN = re.compile(r"Izvor:\s*(.+?),?\s*\bstr\.?\s*(\d+(?:\s*[–-]\s*\d+)?)", re.IGNORECASE)
 
 def ucitaj_rezultate(path: Path) -> list:
     with open(path, "r", encoding="utf-8") as f:
@@ -55,8 +52,7 @@ def izvuci_navedene_izvore(generated_answer: str) -> list:
     Model može navesti više izvora u istom odgovoru.
     """
     nadeni = IZVOR_PATTERN.findall(generated_answer)
-    return [{"naziv": naziv.strip(), "stranica": str(stranica).strip()} for naziv, stranica in nadeni]
-
+    return [{"naziv": naziv.strip().strip("[]").strip(), "stranica": str(stranica).strip()} for naziv, stranica in nadeni]
 
 def provjeri_poklapanje(navedeni_izvori: list, sources_meta: list) -> str:
     """
@@ -77,10 +73,10 @@ def provjeri_poklapanje(navedeni_izvori: list, sources_meta: list) -> str:
         return "nema_citata"
 
     dokumenti_dohvaceni = {s.get("naziv_dokumenta", "").lower() for s in sources_meta}
-    stranice_po_dokumentu = {
-        s.get("naziv_dokumenta", "").lower(): str(s.get("stranica", "")).lower()
-        for s in sources_meta
-    }
+    stranice_po_dokumentu = {}
+    for s in sources_meta:
+        dok = s.get("naziv_dokumenta", "").lower()
+        stranice_po_dokumentu.setdefault(dok, set()).add(str(s.get("stranica", "")).lower())
 
     dokument_pogodak = False
     stranica_pogodak = False
@@ -91,7 +87,7 @@ def provjeri_poklapanje(navedeni_izvori: list, sources_meta: list) -> str:
         for dok in dokumenti_dohvaceni:
             if naziv_lower in dok or dok in naziv_lower:
                 dokument_pogodak = True
-                if izvor["stranica"].lower() in stranice_po_dokumentu.get(dok, ""):
+                if izvor["stranica"].lower() in stranice_po_dokumentu.get(dok, set()):
                     stranica_pogodak = True
 
     if dokument_pogodak and stranica_pogodak:
@@ -134,8 +130,8 @@ def spremi_csv(redovi: list, output_dir: Path) -> Path:
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = output_dir / f"citation_check_{timestamp}.csv"
 
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=[
+    with open(path, "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, delimiter=";", fieldnames=[
             "id", "question", "navedeni_izvori", "dohvaceni_izvori",
             "auto_ocjena", "rucna_ocjena", "napomena"
         ])
