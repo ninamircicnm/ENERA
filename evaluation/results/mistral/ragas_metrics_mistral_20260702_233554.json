@@ -1,0 +1,8 @@
+{
+  "timestamp": "mistral_20260702_233554",
+  "n_pitanja": 20,
+  "answer_relevancy": 0.2667,
+  "faithfulness": 0.9025,
+  "context_precision": 0.5333,
+  "context_recall": 0.8667
+}
