@@ -1,33 +1,14 @@
 """
 run_evaluation.py — Pokretanje RAGAS automatske evaluacije
 
-Korištenje (iz korijena projekta, s aktivnim venv):
+Korištenje (iz korijena projekta, s aktivnim venv (Python 3.10 radi stabilnosti)):
     py evaluation/run_evaluation.py
 
 Preduvjeti:
     - Ollama mora biti pokrenuta (gemma3:4b i nomic-embed-text)
     - ChromaDB mora biti popunjena (indexer.py)
-
-VAŽNO: "contexts" polje koje se šalje u RAGAS dolazi iz
-rag_result["retrieved_chunks"] — stvarnog teksta odlomaka koje je
-ChromaDB dohvatio za dano pitanje. NE koristi se reference_context
-(ručno napisani zlatni standard) jer bi to umjetno naduvalo
-Context Recall i učinilo metriku besmislenom.
-
-NAPOMENA O ASYNCIO KOMPATIBILNOSTI (Python 3.14 + Windows):
-ragas==0.2.15 koristi vlastiti executor koji pokreće asyncio zadatke
-kroz ThreadPoolExecutor. Na Python 3.14 (Windows) asyncio.Timeout ne
-može se koristiti izvan aktivnog event loopa — što uzrokuje
-"RuntimeError: Timeout should be used inside a task" za sve jobove.
-RunConfig(max_workers=1) ne rješava problem jer executor i dalje
-koristi threading umjesto direktnog async poziva.
-
-RJEŠENJE: zaobilazimo RAGAS executor potpuno i pozivamo svaku metriku
-sinkrono pomoću asyncio.run() za svaki pojedinačni uzorak. Sporije,
-ali jedina pouzdana opcija na ovoj kombinaciji verzija.
 """
 
-import asyncio
 import json
 import csv
 import math
@@ -48,13 +29,14 @@ from ragas.metrics import (
     context_recall,
 )
 from ragas.dataset_schema import SingleTurnSample
-from langchain_ollama import ChatOllama, OllamaEmbeddings
+from langchain_ollama import OllamaLLM, OllamaEmbeddings
 from ragas.llms import LangchainLLMWrapper
 from ragas.embeddings import LangchainEmbeddingsWrapper
 
 # Lokalni modeli za RAGAS evaluaciju
+# zašto se koristi OllamaLLM, radi problema sa kompatibilnošću pa sam pokušala i sa OllamaLLM pa je i ostalo tako
 ragas_llm = LangchainLLMWrapper(
-    ChatOllama(model="gemma3:4b", temperature=0.0)
+    OllamaLLM(model="gemma3:4b", temperature=0.0)
 )
 ragas_embeddings = LangchainEmbeddingsWrapper(
     OllamaEmbeddings(model="nomic-embed-text")
@@ -73,12 +55,10 @@ MAX_RETRIES = 3
 RETRY_DELAY_SEC = 8
 INTER_CALL_DELAY_SEC = 2
 
-
 def pozovi_pipeline_s_retryem(question: str) -> dict:
     """
-    Poziva RAG pipeline uz automatsko ponavljanje pri tranzijentnim
-    greškama Ollama servera. Nakon MAX_RETRIES pokušaja vraća prazan
-    rezultat umjesto da prekine cijeli evaluacijski run.
+    Poziva RAG pipeline uz automatsko ponavljanje pri tranzijentnim greškama Ollama servera. 
+    Nakon MAX_RETRIES pokušaja vraća prazan rezultat umjesto da prekine cijeli evaluacijski run.
     """
     zadnja_greska = None
     for pokusaj in range(1, MAX_RETRIES + 1):
@@ -94,9 +74,8 @@ def pozovi_pipeline_s_retryem(question: str) -> dict:
     print(f"  Svi pokušaji neuspješni. Zadnja greška: {zadnja_greska}")
     return {"answer": "", "sources": [], "retrieved_chunks": []}
 
-
+#Poziva RAG pipeline za svako pitanje i bilježi odgovor + dohvaćene chunkove.
 def prikupi_odgovore(eval_dataset: list) -> list:
-    """Poziva RAG pipeline za svako pitanje i bilježi odgovor + dohvaćene chunkove."""
     print(f"PRIKUPLJANJE ODGOVORA ({len(eval_dataset)} pitanja)")
 
     rezultati = []
@@ -123,25 +102,8 @@ def prikupi_odgovore(eval_dataset: list) -> list:
 
     return rezultati
 
-
-async def izracunaj_metriku(metric, uzorak: SingleTurnSample) -> float:
-    """
-    Poziva jednu RAGAS metriku za jedan uzorak direktno kroz single_turn_ascore()
-    — zaobilazi RAGAS executor i nest_asyncio koji ne rade na Python 3.14.
-    """
-    try:
-        return await metric.single_turn_ascore(uzorak)
-    except Exception as e:
-        print(f"    Greška pri računanju metrike: {e}")
-        return float("nan")
-
-
+# Računa sve RAGAS metrike sinkrono, uzorak po uzorak, metrika po metriku.
 def izracunaj_sve_metrike(rezultati: list) -> dict:
-    """
-    Računa sve RAGAS metrike sinkrono, uzorak po uzorak, metrika po metriku.
-    Svaki asyncio.run() poziv kreira vlastiti event loop — jedini pouzdani
-    način za Python 3.14 + Windows kombinaciju s ragas==0.2.15.
-    """
     print(f"\nRACUNANJE RAGAS METRIKA ({len(rezultati)} uzoraka x {len(METRICS)} metrike)")
 
     scores = {name: [] for name in METRIC_NAMES}
@@ -157,7 +119,7 @@ def izracunaj_sve_metrike(rezultati: list) -> dict:
         print(f"  [{i:02d}/{len(rezultati)}] {r['id']}", end="", flush=True)
 
         for metric, name in zip(METRICS, METRIC_NAMES):
-            vrijednost = asyncio.run(izracunaj_metriku(metric, uzorak))
+            vrijednost = metric.single_turn_score(uzorak)
             scores[name].append(vrijednost)
             status = f"{vrijednost:.3f}" if not math.isnan(vrijednost) else "NaN"
             print(f"  {name[:3]}={status}", end="", flush=True)
@@ -166,18 +128,16 @@ def izracunaj_sve_metrike(rezultati: list) -> dict:
 
     return scores
 
-
+# Računanje prosjeka po metrici
 def agregiraj_score(scores: dict) -> dict:
-    """Računa prosjek po metrici, ignorira NaN vrijednosti."""
     agregirano = {}
     for name, vrijednosti in scores.items():
         valjane = [v for v in vrijednosti if not math.isnan(v)]
         agregirano[name] = sum(valjane) / len(valjane) if valjane else float("nan")
     return agregirano
 
-
+# Sprema agregatne metrike (JSON) i detalje po pitanju (CSV).
 def spremi_rezultate(agregirano: dict, scores: dict, rezultati: list, output_dir: Path):
-    """Sprema agregatne metrike (JSON) i detalje po pitanju (CSV)."""
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
@@ -231,12 +191,8 @@ def spremi_rezultate(agregirano: dict, scores: dict, rezultati: list, output_dir
 
     return metrics_dict
 
-
+# spremanje sirovih razultata radi citation_check.py da se ne mora ponovo pozivati
 def spremi_sirove_rezultate(rezultati: list, output_dir: Path) -> Path:
-    """
-    Sprema sirove rezultate u JSON — ulaz za citation_check.py,
-    bez potrebe za ponovnim pozivanjem RAG pipeline-a.
-    """
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = output_dir / f"raw_results_{timestamp}.json"
@@ -257,9 +213,7 @@ def provjeri_ollama_dostupnost():
 
 
 def main():
-    print("=" * 60)
     print("RAG ASISTENT — RAGAS EVALUACIJA")
-    print("=" * 60)
     provjeri_ollama_dostupnost()
 
     # 1. Prikupi odgovore iz RAG pipeline-a
@@ -271,9 +225,7 @@ def main():
     # 3. Agregiraj i ispisi
     agregirano = agregiraj_score(scores)
 
-    print("\n" + "=" * 60)
     print("REZULTATI EVALUACIJE")
-    print("=" * 60)
 
     nan_count = sum(1 for v in agregirano.values() if math.isnan(v))
     if nan_count == len(agregirano):
