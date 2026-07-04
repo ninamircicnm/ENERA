@@ -5,9 +5,8 @@ Korištenje (iz korijena projekta, s aktivnim venv):
     py evaluation/run_evaluation.py
 
 Preduvjeti:
-    - pip install ragas datasets langchain-ollama
     - Ollama mora biti pokrenuta (gemma3:4b i nomic-embed-text)
-    - ChromaDB mora biti popunjena (backend/indexer.py)
+    - ChromaDB mora biti popunjena (indexer.py)
 
 VAŽNO: "contexts" polje koje se šalje u RAGAS dolazi iz
 rag_result["retrieved_chunks"] — stvarnog teksta odlomaka koje je
@@ -15,43 +14,45 @@ ChromaDB dohvatio za dano pitanje. NE koristi se reference_context
 (ručno napisani zlatni standard) jer bi to umjetno naduvalo
 Context Recall i učinilo metriku besmislenom.
 
-NAPOMENA O STABILNOSTI: pri uzastopnom pozivanju 20 pitanja zaredom
-Ollama server lokalno povremeno prekida vezu (tranzijentni pad procesa
-"model runner". Da bi cijeli evaluacijski run preživio takav
-pojedinačni pad umjesto da se prekine na pola, prikupi_odgovore koristi
-retry s pauzom (RETRY_DELAY_SEC) i kratku pauzu između SVIH poziva
-(INTER_CALL_DELAY_SEC) kako bi se rasteretio lokalni model runner.
+NAPOMENA O ASYNCIO KOMPATIBILNOSTI (Python 3.14 + Windows):
+ragas==0.2.15 koristi vlastiti executor koji pokreće asyncio zadatke
+kroz ThreadPoolExecutor. Na Python 3.14 (Windows) asyncio.Timeout ne
+može se koristiti izvan aktivnog event loopa — što uzrokuje
+"RuntimeError: Timeout should be used inside a task" za sve jobove.
+RunConfig(max_workers=1) ne rješava problem jer executor i dalje
+koristi threading umjesto direktnog async poziva.
+
+RJEŠENJE: zaobilazimo RAGAS executor potpuno i pozivamo svaku metriku
+sinkrono pomoću asyncio.run() za svaki pojedinačni uzorak. Sporije,
+ali jedina pouzdana opcija na ovoj kombinaciji verzija.
 """
 
+import asyncio
 import json
 import csv
+import math
 import time
 from pathlib import Path
 from datetime import datetime
 
-# Dodaj korijen projekta u Python path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from backend.rag_pipeline import get_answer_with_sources
 from evaluation.eval_dataset import EVAL_DATASET
 
-# RAGAS uvozi 
-from datasets import Dataset
-from ragas import evaluate
 from ragas.metrics import (
     answer_relevancy,
     faithfulness,
     context_precision,
     context_recall,
 )
+from ragas.dataset_schema import SingleTurnSample
 from langchain_ollama import ChatOllama, OllamaEmbeddings
-
-# Konfiguracija RAGAS-a s lokalnim modelima
 from ragas.llms import LangchainLLMWrapper
 from ragas.embeddings import LangchainEmbeddingsWrapper
-from ragas.run_config import RunConfig
 
+# Lokalni modeli za RAGAS evaluaciju
 ragas_llm = LangchainLLMWrapper(
     ChatOllama(model="gemma3:4b", temperature=0.0)
 )
@@ -59,66 +60,43 @@ ragas_embeddings = LangchainEmbeddingsWrapper(
     OllamaEmbeddings(model="nomic-embed-text")
 )
 
-METRICS = [
-    answer_relevancy,
-    faithfulness,
-    context_precision,
-    context_recall,
-]
-
-RAGAS_RUN_CONFIG = RunConfig(max_workers=1, timeout=120) 
+METRICS = [answer_relevancy, faithfulness, context_precision, context_recall]
+METRIC_NAMES = ["answer_relevancy", "faithfulness", "context_precision", "context_recall"]
 
 for metric in METRICS:
     metric.llm = ragas_llm
     if hasattr(metric, "embeddings"):
         metric.embeddings = ragas_embeddings
 
-# Rezervni mehanizam: postavljamo run_config direktno na svaku metriku
-# jer ragas==0.2.15 ne propagira uvijek run_config iz evaluate() poziva
-# na sve metrike — direktno postavljanje osigurava max_workers=1 svugdje.
-for metric in METRICS:
-    if hasattr(metric, "run_config"):
-        metric.run_config = RAGAS_RUN_CONFIG
-
-# max_workers=1 i timeout=120 izbjegavaju paralelni asyncio koji na Python 3.14 (Windows)
-# uzrokuje "RuntimeError: Timeout should be used inside a task" unutar
-# ragas.executor / nest_asyncio mehanizma. Sporije, ali pouzdano.
-# NAPOMENA: ragas==0.2.15 prima run_config u evaluate(), ali ga ne propagira
-# konzistentno na sve metrike u svim verzijama — kao rezervni mehanizam
-# postavljamo run_config direktno i na svaku metriku.
+# Konfiguracija otpornosti na padove Ollame
+MAX_RETRIES = 3
+RETRY_DELAY_SEC = 8
+INTER_CALL_DELAY_SEC = 2
 
 
-# Konfiguracija otpornosti na tranzijentne padove Ollame 
-MAX_RETRIES = 3            # koliko se puta ponavlja isto pitanje nakon greške
-RETRY_DELAY_SEC = 8        # pauza prije ponovnog pokušaja (daje Ollami vremena da se oporavi)
-INTER_CALL_DELAY_SEC = 2   # pauza nakon SVAKOG poziva (uspješnog ili ne) — rasterećuje model runner
-
-
-def pozovi_pipeline_s_retryem(question: str, max_retries: int = MAX_RETRIES) -> dict:
+def pozovi_pipeline_s_retryem(question: str) -> dict:
     """
-    Poziva get_answer_with_sources uz ponavljanje pri tranzijentnim
-    greškama (npr. Ollama server privremeno prekine vezu / padne proces
-    modela). Nakon max_retries neuspjelih pokušaja, vraća prazan rezultat
-    umjesto da sruši cijeli evaluacijski run.
+    Poziva RAG pipeline uz automatsko ponavljanje pri tranzijentnim
+    greškama Ollama servera. Nakon MAX_RETRIES pokušaja vraća prazan
+    rezultat umjesto da prekine cijeli evaluacijski run.
     """
     zadnja_greska = None
-    for pokusaj in range(1, max_retries + 1):
+    for pokusaj in range(1, MAX_RETRIES + 1):
         try:
             return get_answer_with_sources(question)
         except Exception as e:
             zadnja_greska = e
-            print(f"  Pokušaj {pokusaj}/{max_retries} neuspješan: {e}")
-            if pokusaj < max_retries:
-                print(f"  Čekam {RETRY_DELAY_SEC}s prije ponovnog pokušaja "
-                      f"(Ollama se možda oporavlja)...")
+            print(f"  Pokušaj {pokusaj}/{MAX_RETRIES} neuspješan: {e}")
+            if pokusaj < MAX_RETRIES:
+                print(f"  Čekam {RETRY_DELAY_SEC}s (Ollama se oporavlja)...")
                 time.sleep(RETRY_DELAY_SEC)
 
-    print(f"  Svi pokušaji neuspješni za ovo pitanje. Zadnja greška: {zadnja_greska}")
+    print(f"  Svi pokušaji neuspješni. Zadnja greška: {zadnja_greska}")
     return {"answer": "", "sources": [], "retrieved_chunks": []}
 
 
 def prikupi_odgovore(eval_dataset: list) -> list:
-    """Poziva RAG pipeline za svako pitanje i bilježi odgovor + stvarno dohvaćene chunkove."""
+    """Poziva RAG pipeline za svako pitanje i bilježi odgovor + dohvaćene chunkove."""
     print(f"PRIKUPLJANJE ODGOVORA ({len(eval_dataset)} pitanja)")
 
     rezultati = []
@@ -128,15 +106,9 @@ def prikupi_odgovore(eval_dataset: list) -> list:
         rag_result = pozovi_pipeline_s_retryem(item["question"])
         odgovor = rag_result.get("answer", "")
         sources = rag_result.get("sources", [])
-        # Stvarni tekst dohvaćenih odlomaka iz ChromaDB — ovo je ono što
-        # RAGAS treba u "contexts" polju (NE reference_context, koji je
-        # naš ručno napisani zlatni standard za usporedbu, ne stvarni dohvat)
         retrieved_chunks = rag_result.get("retrieved_chunks", [])
 
         if not retrieved_chunks:
-            # Bilježimo prazan dohvat kao stvarni neuspjeh, ne maskiramo ga
-            # zlatnim kontekstom — prazan dohvat treba sniziti Context Recall,
-            # ne biti skriven umjetno dobrim rezultatom.
             print("  UPOZORENJE: pipeline nije vratio nijedan chunk")
             retrieved_chunks = ["[Nema dohvaćenog konteksta]"]
 
@@ -144,57 +116,104 @@ def prikupi_odgovore(eval_dataset: list) -> list:
             **item,
             "generated_answer": odgovor,
             "retrieved_contexts": retrieved_chunks,
-            "sources_meta": sources,  # metapodaci za citation_check.py
+            "sources_meta": sources,
         })
-        print(f" Odgovor ({len(odgovor)} znakova), {len(retrieved_chunks)} chunkova")
-
-        # Pauza nakon svakog poziva (uspješnog ili ne) da se Ollama
-        # model runner stigne rasteretiti prije sljedećeg upita
+        print(f"  Odgovor ({len(odgovor)} znakova), {len(retrieved_chunks)} chunkova")
         time.sleep(INTER_CALL_DELAY_SEC)
 
     return rezultati
 
 
-def pripremi_ragas_dataset(rezultati: list) -> Dataset:
-    """Pretvara rezultate u HuggingFace Dataset format koji RAGAS očekuje."""
-    return Dataset.from_dict({
-        "question":    [r["question"] for r in rezultati],
-        "answer":      [r["generated_answer"] for r in rezultati],
-        "contexts":    [r["retrieved_contexts"] for r in rezultati],
-        "ground_truth":[r["ground_truth"] for r in rezultati],
-    })
+async def izracunaj_metriku(metric, uzorak: SingleTurnSample) -> float:
+    """
+    Poziva jednu RAGAS metriku za jedan uzorak direktno kroz single_turn_ascore()
+    — zaobilazi RAGAS executor i nest_asyncio koji ne rade na Python 3.14.
+    """
+    try:
+        return await metric.single_turn_ascore(uzorak)
+    except Exception as e:
+        print(f"    Greška pri računanju metrike: {e}")
+        return float("nan")
 
 
-def spremi_rezultate(ragas_score, rezultati: list, output_dir: Path):
-    """Sprema rezultate evaluacije u JSON i CSV format."""
+def izracunaj_sve_metrike(rezultati: list) -> dict:
+    """
+    Računa sve RAGAS metrike sinkrono, uzorak po uzorak, metrika po metriku.
+    Svaki asyncio.run() poziv kreira vlastiti event loop — jedini pouzdani
+    način za Python 3.14 + Windows kombinaciju s ragas==0.2.15.
+    """
+    print(f"\nRACUNANJE RAGAS METRIKA ({len(rezultati)} uzoraka x {len(METRICS)} metrike)")
+
+    scores = {name: [] for name in METRIC_NAMES}
+
+    for i, r in enumerate(rezultati, 1):
+        uzorak = SingleTurnSample(
+            user_input=r["question"],
+            response=r["generated_answer"],
+            retrieved_contexts=r["retrieved_contexts"],
+            reference=r["ground_truth"],
+        )
+
+        print(f"  [{i:02d}/{len(rezultati)}] {r['id']}", end="", flush=True)
+
+        for metric, name in zip(METRICS, METRIC_NAMES):
+            vrijednost = asyncio.run(izracunaj_metriku(metric, uzorak))
+            scores[name].append(vrijednost)
+            status = f"{vrijednost:.3f}" if not math.isnan(vrijednost) else "NaN"
+            print(f"  {name[:3]}={status}", end="", flush=True)
+
+        print()
+
+    return scores
+
+
+def agregiraj_score(scores: dict) -> dict:
+    """Računa prosjek po metrici, ignorira NaN vrijednosti."""
+    agregirano = {}
+    for name, vrijednosti in scores.items():
+        valjane = [v for v in vrijednosti if not math.isnan(v)]
+        agregirano[name] = sum(valjane) / len(valjane) if valjane else float("nan")
+    return agregirano
+
+
+def spremi_rezultate(agregirano: dict, scores: dict, rezultati: list, output_dir: Path):
+    """Sprema agregatne metrike (JSON) i detalje po pitanju (CSV)."""
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Agregatne metrike — sigurna_vrijednost() štiti od slučaja kad RAGAS
-    # vrati listu NaN-ova umjesto skalara (kad asyncio jobovi padnu)
-    metrics_dict = {
-        "timestamp": timestamp,
-        "n_pitanja": len(rezultati),
-        "answer_relevancy":  round(sigurna_vrijednost(ragas_score, "answer_relevancy"), 4),
-        "faithfulness":      round(sigurna_vrijednost(ragas_score, "faithfulness"), 4),
-        "context_precision": round(sigurna_vrijednost(ragas_score, "context_precision"), 4),
-        "context_recall":    round(sigurna_vrijednost(ragas_score, "context_recall"), 4),
-    }
+    # JSON — agregatne metrike
+    def fmt(v):
+        return round(v, 4) if not math.isnan(v) else None
 
+    metrics_dict = {
+        "timestamp":         timestamp,
+        "n_pitanja":         len(rezultati),
+        "answer_relevancy":  fmt(agregirano["answer_relevancy"]),
+        "faithfulness":      fmt(agregirano["faithfulness"]),
+        "context_precision": fmt(agregirano["context_precision"]),
+        "context_recall":    fmt(agregirano["context_recall"]),
+    }
     json_path = output_dir / f"ragas_metrics_{timestamp}.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(metrics_dict, f, ensure_ascii=False, indent=2)
-    print(f"\n Agregatne metrike: {json_path}")
+    print(f"\n  Agregatne metrike: {json_path}")
 
-    # Detalji po pitanju
+    # CSV — detalji po pitanju s individualnim score-ovima
     csv_path = output_dir / f"ragas_details_{timestamp}.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=[
+        fieldnames = [
             "id", "document", "category", "question",
-            "ground_truth", "generated_answer", "sources_meta"
-        ])
+            "ground_truth", "generated_answer",
+            "answer_relevancy", "faithfulness",
+            "context_precision", "context_recall",
+            "sources_meta",
+        ]
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        for r in rezultati:
+        for idx, r in enumerate(rezultati):
+            def cell(name):
+                v = scores[name][idx]
+                return round(v, 4) if not math.isnan(v) else "nan"
             writer.writerow({
                 "id":               r["id"],
                 "document":         r["document"],
@@ -202,30 +221,32 @@ def spremi_rezultate(ragas_score, rezultati: list, output_dir: Path):
                 "question":         r["question"],
                 "ground_truth":     r["ground_truth"],
                 "generated_answer": r["generated_answer"],
-                "sources_meta":     r.get("sources_meta", []),
+                "answer_relevancy": cell("answer_relevancy"),
+                "faithfulness":     cell("faithfulness"),
+                "context_precision":cell("context_precision"),
+                "context_recall":   cell("context_recall"),
+                "sources_meta":     str(r.get("sources_meta", [])),
             })
-    print(f"Detalji po pitanju: {csv_path}")
+    print(f"  Detalji po pitanju:  {csv_path}")
 
     return metrics_dict
 
 
 def spremi_sirove_rezultate(rezultati: list, output_dir: Path) -> Path:
     """
-    Sprema sirove rezultate (uključujući sources_meta i retrieved_contexts)
-    u JSON — koristi se kao ulaz za citation_check.py, bez potrebe za
-    ponovnim pozivanjem RAG pipeline-a.
+    Sprema sirove rezultate u JSON — ulaz za citation_check.py,
+    bez potrebe za ponovnim pozivanjem RAG pipeline-a.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = output_dir / f"raw_results_{timestamp}.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(rezultati, f, ensure_ascii=False, indent=2)
-    print(f"Sirovi rezultati (za citation_check.py): {path}")
+    print(f"  Sirovi rezultati:    {path}")
     return path
 
 
 def provjeri_ollama_dostupnost():
-    """Brza provjera da je Ollama server dostupan prije pokretanja punog runa."""
     import urllib.request
     try:
         urllib.request.urlopen("http://127.0.0.1:11434", timeout=5)
@@ -234,44 +255,43 @@ def provjeri_ollama_dostupnost():
         print(f"UPOZORENJE: Ollama server možda nije dostupan ({e}).")
         print("Provjeri da je Ollama pokrenuta prije nastavka.")
 
-def sigurna_vrijednost(ragas_score, kljuc: str) -> float:
-    """
-    Ekstrahira skalarnu vrijednost iz RAGAS rezultata. Ako je vrijednost
-    lista (slučaj kad su pojedinačni pozivi metrika propali pa je rezultat
-    niz NaN-ova umjesto skalara), računa prosjek zanemarujući NaN.
-    Vraća float('nan') ako nema valjanih vrijednosti.
-    """
-    import math
-    vrijednost = ragas_score[kljuc]
-    if isinstance(vrijednost, (list, tuple)):
-        valjane = [v for v in vrijednost if v is not None and not (isinstance(v, float) and math.isnan(v))]
-        return sum(valjane) / len(valjane) if valjane else float("nan")
-    return float(vrijednost)
 
 def main():
+    print("=" * 60)
     print("RAG ASISTENT — RAGAS EVALUACIJA")
+    print("=" * 60)
     provjeri_ollama_dostupnost()
 
-    # 1. Prikupi odgovore iz pipeline-a
+    # 1. Prikupi odgovore iz RAG pipeline-a
     rezultati = prikupi_odgovore(EVAL_DATASET)
 
-    # 2. Pripremi dataset za RAGAS
-    print("POKRETANJE RAGAS METRIKA")
-    ragas_ds = pripremi_ragas_dataset(rezultati)
+    # 2. Izracunaj RAGAS metrike sinkrono (zaobilazi executor)
+    scores = izracunaj_sve_metrike(rezultati)
 
-    # 3. Pokreni evaluaciju
-    ragas_score = evaluate(ragas_ds, metrics=METRICS, run_config=RAGAS_RUN_CONFIG)
+    # 3. Agregiraj i ispisi
+    agregirano = agregiraj_score(scores)
 
-    # 4. Ispiši rezultate
+    print("\n" + "=" * 60)
     print("REZULTATI EVALUACIJE")
-    print(f"  Answer Relevancy:  {sigurna_vrijednost(ragas_score, 'answer_relevancy'):.4f}")
-    print(f"  Faithfulness:      {sigurna_vrijednost(ragas_score, 'faithfulness'):.4f}")
-    print(f"  Context Precision: {sigurna_vrijednost(ragas_score, 'context_precision'):.4f}")
-    print(f"  Context Recall:    {sigurna_vrijednost(ragas_score, 'context_recall'):.4f}")
+    print("=" * 60)
 
-    # 5. Spremi rezultate
+    nan_count = sum(1 for v in agregirano.values() if math.isnan(v))
+    if nan_count == len(agregirano):
+        print("UPOZORENJE: sve metrike su NaN — provjeri Ollamu i modele.\n")
+
+    def ispisi(label, key):
+        v = agregirano[key]
+        print(f"  {label}  {v:.4f}" if not math.isnan(v) else f"  {label}  NaN")
+
+    ispisi("Answer Relevancy: ", "answer_relevancy")
+    ispisi("Faithfulness:     ", "faithfulness")
+    ispisi("Context Precision:", "context_precision")
+    ispisi("Context Recall:   ", "context_recall")
+
+    # 4. Spremi rezultate
+    print("\nSPREMANJE REZULTATA")
     output_dir = Path(__file__).parent / "results"
-    spremi_rezultate(ragas_score, rezultati, output_dir)
+    spremi_rezultate(agregirano, scores, rezultati, output_dir)
     spremi_sirove_rezultate(rezultati, output_dir)
 
 
