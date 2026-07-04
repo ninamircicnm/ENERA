@@ -1,0 +1,215 @@
+[
+  {
+    "id": "MET-pregled",
+    "pitanje": "Što je energetski pregled zgrade i koji su njegovi ciljevi?",
+    "ciljana_kategorija": "Energetski pregled zgrada",
+    "purity_bez_filtra": 1.0,
+    "purity_s_filtrom": 1.0,
+    "dohvat_bez_filtra": [
+      {
+        "rank": 1,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 3,
+        "status": "Aktivan",
+        "score": 0.2714,
+        "u_ciljanoj": true,
+        "tekst": "zgrade u stambenom sektoru), ali energetski pregled i pojedinih vrsta zgrada mogu također biti \njedinstveni i poprilično tehnički složeni (npr. bolnice, bazeni, lječilišta ).  \nEnergetski pregled zgrade može uključivati pregled cijele zgrade ili samo energetski pregled dijela \nodnosno dijelova zgrade tj. samostalne uporabne cjeline (npr. stan u stambenoj zgradi)."
+      },
+      {
+        "rank": 2,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 2,
+        "status": "Aktivan",
+        "score": 0.3163,
+        "u_ciljanoj": true,
+        "tekst": "sustava kod grijanja i hlađenja prostora zgrade, \n Algoritam za određivanje energetske učinkovitosti sustava r asvjete u zgradama \n(energetski zahtjevi za rasvjetu).  \nSlijedećom slikom su prikazani provedbeni koraci energetskog pregleda zgrade, a u nastavku su \nkoraci detaljno opisani."
+      },
+      {
+        "rank": 3,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 13,
+        "status": "Aktivan",
+        "score": 0.3528,
+        "u_ciljanoj": true,
+        "tekst": "certifikatori mogu koristiti s ciljem olakšavanja same provedbe energetskog pregleda.  \nDio upitnika, koje naručitelj nije u mogućnosti ispuniti, prikuplja se kroz energetski pregled zgrade. \nUpravitelj ili vlasnik zgrade najčešće raspolaže podacima o  općim karakteristikama zgrade dok \nosoblje za održavanje vodi tehničke i radne podatke o opremi i sustavima."
+      }
+    ],
+    "dohvat_s_filtrom": [
+      {
+        "rank": 1,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 3,
+        "status": "Aktivan",
+        "score": 0.2714,
+        "u_ciljanoj": true,
+        "tekst": "zgrade u stambenom sektoru), ali energetski pregled i pojedinih vrsta zgrada mogu također biti \njedinstveni i poprilično tehnički složeni (npr. bolnice, bazeni, lječilišta ).  \nEnergetski pregled zgrade može uključivati pregled cijele zgrade ili samo energetski pregled dijela \nodnosno dijelova zgrade tj. samostalne uporabne cjeline (npr. stan u stambenoj zgradi)."
+      },
+      {
+        "rank": 2,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 2,
+        "status": "Aktivan",
+        "score": 0.3163,
+        "u_ciljanoj": true,
+        "tekst": "sustava kod grijanja i hlađenja prostora zgrade, \n Algoritam za određivanje energetske učinkovitosti sustava r asvjete u zgradama \n(energetski zahtjevi za rasvjetu).  \nSlijedećom slikom su prikazani provedbeni koraci energetskog pregleda zgrade, a u nastavku su \nkoraci detaljno opisani."
+      },
+      {
+        "rank": 3,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Energetski pregled zgrada",
+        "stranica": 13,
+        "status": "Aktivan",
+        "score": 0.3528,
+        "u_ciljanoj": true,
+        "tekst": "certifikatori mogu koristiti s ciljem olakšavanja same provedbe energetskog pregleda.  \nDio upitnika, koje naručitelj nije u mogućnosti ispuniti, prikuplja se kroz energetski pregled zgrade. \nUpravitelj ili vlasnik zgrade najčešće raspolaže podacima o  općim karakteristikama zgrade dok \nosoblje za održavanje vodi tehničke i radne podatke o opremi i sustavima."
+      }
+    ]
+  },
+  {
+    "id": "VEN-pregledi",
+    "pitanje": "Koliko često se moraju provoditi redoviti pregledi sustava ventilacije i klimatizacije?",
+    "ciljana_kategorija": "Mjere obnove zgrada",
+    "purity_bez_filtra": 1.0,
+    "purity_s_filtrom": 1.0,
+    "dohvat_bez_filtra": [
+      {
+        "rank": 1,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 271,
+        "status": "Aktivan",
+        "score": 0.307,
+        "u_ciljanoj": true,
+        "tekst": "Kod redovitih pregleda sustava hlađenja prostora zgrade se razlikuju:  \n redoviti pregledi sustava hlađenja,  \n redoviti pregledi kombiniranog sustava hlađenja i prisilne ventilacije/klimatizacije.  \nGrijanje prostora zgrade može se ostvariti:  \n sobnim sustavom (radijatori, ventilokonvektori, po vršinski sustavi grijanja, …),  \n GViK sustavom (klima komora s grijačem),  \n sobnim i GViK sustavom.  \nHlađenje prostora zgrade može se ostvariti:  \n sobnim sustavom (ventilokonvektori, površinski sus tavi hlađenja, …),  \n GViK sustavom (klima komora s hladnjakom),  \n sobnim i GViK sustavom."
+      },
+      {
+        "rank": 2,
+        "dokument": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 6,
+        "status": "Aktivan",
+        "score": 0.3253,
+        "u_ciljanoj": true,
+        "tekst": "– sustav klimatizacije – je sustav kojim se djeluje na temperaturu, vlažnost i kvalitetu \nzraka te ostvaruje prisilna izmjena zraka u prostoriji što neposredno služi postizanju \nmikro higijenskih uvjeta i odgovarajućeg stupnja ugodnosti prostora, \n– sustav djelomične klimatizacije – je sustav kod kojeg bilo koja od značajki koje mora \nispunjavati sustav klimatizacije nije ispunjena i kontrolirana, \n– prirodna ventilacija – je prozračivanje prostorija kod kojeg se zrak u prostoriji \nizmjenjuje korištenjem njegovih prirodnih svojstava pri različitim temperaturama u \nprostoriji i izvan nje, a ostvaruje se kroz prozore, kontrolirane otvore na pročeljima ili \nventilacijskim kanalima,"
+      },
+      {
+        "rank": 3,
+        "dokument": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 9,
+        "status": "Aktivan",
+        "score": 0.3655,
+        "u_ciljanoj": true,
+        "tekst": "zaštite u odnosu na ventilaciju, djelomičnu klimatizaciju i klimatizaciju zgrada. \nČlanak 11. \nTehnička svojstva sustava moraju biti takva da, osim ispunjavanja zahtjeva iz ovoga Propisa, \nbudu ispunjeni i zahtjevi posebnih propisa kojima se uređuje ispunjavanje drugih bitnih \nzahtjeva za zgradu. \nČlanak 12. \nSustavi moraju nakon rekonstrukcije odnosno adaptacije zgrade čiji su sastavni dio, a kojima \nse utječe na postojeći sustav, imati tehnička svojstva propisana člankom 9. stavkom 1. i 2. i \nčlankom 11. ovoga Propisa. \nIII. PROJEKTIRANJE SUSTAVA \nČlanak 13. \n(1) Projektiranjem sustava moraju se za izvođenje i projektirani uporabni vijek sustava i \nzgrade predvidjeti svi utjecaji na sustave koji proizlaze iz načina i redoslijeda izvođenja,"
+      }
+    ],
+    "dohvat_s_filtrom": [
+      {
+        "rank": 1,
+        "dokument": "Metodologija provođenja energetskog pregleda zgrada 2021",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 271,
+        "status": "Aktivan",
+        "score": 0.307,
+        "u_ciljanoj": true,
+        "tekst": "Kod redovitih pregleda sustava hlađenja prostora zgrade se razlikuju:  \n redoviti pregledi sustava hlađenja,  \n redoviti pregledi kombiniranog sustava hlađenja i prisilne ventilacije/klimatizacije.  \nGrijanje prostora zgrade može se ostvariti:  \n sobnim sustavom (radijatori, ventilokonvektori, po vršinski sustavi grijanja, …),  \n GViK sustavom (klima komora s grijačem),  \n sobnim i GViK sustavom.  \nHlađenje prostora zgrade može se ostvariti:  \n sobnim sustavom (ventilokonvektori, površinski sus tavi hlađenja, …),  \n GViK sustavom (klima komora s hladnjakom),  \n sobnim i GViK sustavom."
+      },
+      {
+        "rank": 2,
+        "dokument": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 6,
+        "status": "Aktivan",
+        "score": 0.3253,
+        "u_ciljanoj": true,
+        "tekst": "– sustav klimatizacije – je sustav kojim se djeluje na temperaturu, vlažnost i kvalitetu \nzraka te ostvaruje prisilna izmjena zraka u prostoriji što neposredno služi postizanju \nmikro higijenskih uvjeta i odgovarajućeg stupnja ugodnosti prostora, \n– sustav djelomične klimatizacije – je sustav kod kojeg bilo koja od značajki koje mora \nispunjavati sustav klimatizacije nije ispunjena i kontrolirana, \n– prirodna ventilacija – je prozračivanje prostorija kod kojeg se zrak u prostoriji \nizmjenjuje korištenjem njegovih prirodnih svojstava pri različitim temperaturama u \nprostoriji i izvan nje, a ostvaruje se kroz prozore, kontrolirane otvore na pročeljima ili \nventilacijskim kanalima,"
+      },
+      {
+        "rank": 3,
+        "dokument": "Tehnički propis o sustavima ventilacije, djelomične klimatizacije i klimatizacije zgrada",
+        "kategorija": "Mjere obnove zgrada",
+        "stranica": 9,
+        "status": "Aktivan",
+        "score": 0.3655,
+        "u_ciljanoj": true,
+        "tekst": "zaštite u odnosu na ventilaciju, djelomičnu klimatizaciju i klimatizaciju zgrada. \nČlanak 11. \nTehnička svojstva sustava moraju biti takva da, osim ispunjavanja zahtjeva iz ovoga Propisa, \nbudu ispunjeni i zahtjevi posebnih propisa kojima se uređuje ispunjavanje drugih bitnih \nzahtjeva za zgradu. \nČlanak 12. \nSustavi moraju nakon rekonstrukcije odnosno adaptacije zgrade čiji su sastavni dio, a kojima \nse utječe na postojeći sustav, imati tehnička svojstva propisana člankom 9. stavkom 1. i 2. i \nčlankom 11. ovoga Propisa. \nIII. PROJEKTIRANJE SUSTAVA \nČlanak 13. \n(1) Projektiranjem sustava moraju se za izvođenje i projektirani uporabni vijek sustava i \nzgrade predvidjeti svi utjecaji na sustave koji proizlaze iz načina i redoslijeda izvođenja,"
+      }
+    ]
+  },
+  {
+    "id": "PRI-povlasteni",
+    "pitanje": "Koji je postupak stjecanja statusa povlaštenog proizvođača električne energije?",
+    "ciljana_kategorija": "Pravni okvir i postupci",
+    "purity_bez_filtra": 0.6666666666666666,
+    "purity_s_filtrom": 1.0,
+    "dohvat_bez_filtra": [
+      {
+        "rank": 1,
+        "dokument": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "kategorija": "Pravni okvir i postupci",
+        "stranica": 8,
+        "status": "Aktivan",
+        "score": 0.2441,
+        "u_ciljanoj": true,
+        "tekst": "se uređuje stjecanje statusa povlaštenog proizvođača električne energije\n63. vlastita potrošnja proizvodnog postrojenja je sva potrošnja električne energije povezana s proizvodnjom električne\nenergije, a uključuje potrošnju koja se koristi za potrebe rada proizvodnog postrojenja, opću potrošnju proizvodnog\npostrojenja, potrošnju električne energije povezanu s pripremom primarnog energenta ili upravljanjem izvorom\nenergije te drugu potrošnju iza obračunskih mjernih mjesta proizvodnog postrojenja. Vlastita potrošnja proizvodnog\npostrojenja podmiruje se proizvodnjom iz proizvodnog postrojenja ili proizvodne jedinice ili se preuzima iz mreže\npreko obračunskih mjernih mjesta proizvodnog postrojenja ili proizvodne jedinice, te se primjenjuje za električnu"
+      },
+      {
+        "rank": 2,
+        "dokument": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "kategorija": "Pravni okvir i postupci",
+        "stranica": 85,
+        "status": "Aktivan",
+        "score": 0.2491,
+        "u_ciljanoj": true,
+        "tekst": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n85 \npropisane odredbama ZOIEVUK-a i Uredbe o korištenju obnovljivih izvora energije i \nvisokoučinkovitih kogeneracija. Rješenje o stjecanju statusa povlaštenog proizvođača \nelektrične energije izdaje se na rok važenja od 25 godina koji se računa od dana izvršnosti \nrješenja94.  \nRješenje o stjecanju statusa povlaštenog proizvođača prestaje važiti istekom roka na koje je \nizdano rješenje, odnosno njegovim stavljan jem izvan snage na zahtjev povlaštenog \nproizvođača, ukidanjem, poništavanjem ili oglaš ivanjem ništavim u skladu s odredbama \nZOIEVUK-a i zakona koji uređuje upravni postupak. \nProtiv rješenja o stjecanju statusa povlaštenog proizvođača električne energije žalba nije"
+      },
+      {
+        "rank": 3,
+        "dokument": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "kategorija": "Obnovljivi izvori energije",
+        "stranica": 94,
+        "status": "Aktivan",
+        "score": 0.2701,
+        "u_ciljanoj": false,
+        "tekst": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n94 \npotiče tržišnom premijom  dok kod ZOC-a HROTE otkupljuje energiju od proizvođača.  Sam \nugovor se potpisuje nakon uspješnog sudjelovanja na javnom natječaju (za ZOC ili TP) prije \nnego je započela gradnja postrojenja. Uz Ugovor o tržišnoj premiji proizvođač mora sklopiti \ni Ugovor o otkupu s otkupljivačem električne energije, a nakon izgradnje postrojenja i sklopiti \nUgovor o sudjelovanju na tržištu električne energije s HROTE-om. \nStatus povlaštenog proizvođača električne energije stječe se: \n• rješenjem HERA-e na temelju zahtjeva za pojedino proizvodno postrojenje ili \n• u slu čaju proizvodnje elektri čne energije u proizvodnim postrojenjima koje su"
+      }
+    ],
+    "dohvat_s_filtrom": [
+      {
+        "rank": 1,
+        "dokument": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "kategorija": "Pravni okvir i postupci",
+        "stranica": 8,
+        "status": "Aktivan",
+        "score": 0.2441,
+        "u_ciljanoj": true,
+        "tekst": "se uređuje stjecanje statusa povlaštenog proizvođača električne energije\n63. vlastita potrošnja proizvodnog postrojenja je sva potrošnja električne energije povezana s proizvodnjom električne\nenergije, a uključuje potrošnju koja se koristi za potrebe rada proizvodnog postrojenja, opću potrošnju proizvodnog\npostrojenja, potrošnju električne energije povezanu s pripremom primarnog energenta ili upravljanjem izvorom\nenergije te drugu potrošnju iza obračunskih mjernih mjesta proizvodnog postrojenja. Vlastita potrošnja proizvodnog\npostrojenja podmiruje se proizvodnjom iz proizvodnog postrojenja ili proizvodne jedinice ili se preuzima iz mreže\npreko obračunskih mjernih mjesta proizvodnog postrojenja ili proizvodne jedinice, te se primjenjuje za električnu"
+      },
+      {
+        "rank": 2,
+        "dokument": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije - Električna energija",
+        "kategorija": "Pravni okvir i postupci",
+        "stranica": 85,
+        "status": "Aktivan",
+        "score": 0.2491,
+        "u_ciljanoj": true,
+        "tekst": "Priručnik o postupcima ishođenja dozvola za izgradnju proizvodnog postrojenja iz obnovljive energije  \n85 \npropisane odredbama ZOIEVUK-a i Uredbe o korištenju obnovljivih izvora energije i \nvisokoučinkovitih kogeneracija. Rješenje o stjecanju statusa povlaštenog proizvođača \nelektrične energije izdaje se na rok važenja od 25 godina koji se računa od dana izvršnosti \nrješenja94.  \nRješenje o stjecanju statusa povlaštenog proizvođača prestaje važiti istekom roka na koje je \nizdano rješenje, odnosno njegovim stavljan jem izvan snage na zahtjev povlaštenog \nproizvođača, ukidanjem, poništavanjem ili oglaš ivanjem ništavim u skladu s odredbama \nZOIEVUK-a i zakona koji uređuje upravni postupak. \nProtiv rješenja o stjecanju statusa povlaštenog proizvođača električne energije žalba nije"
+      },
+      {
+        "rank": 3,
+        "dokument": "Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji",
+        "kategorija": "Pravni okvir i postupci",
+        "stranica": 44,
+        "status": "Aktivan",
+        "score": 0.3025,
+        "u_ciljanoj": true,
+        "tekst": "o izmjeni rješenja o stjecanju statusa povlaštenog proizvođača električne energije, ako su ispunjeni uvjeti utvrđeni\nčlancima 36. i 37. ovoga Zakona.\n(6) Agencija može rješenje o stjecanju statusa povlaštenog proizvođača električne energije izmijeniti u sljedećim\nslučajevima:\n1. kada povlašteni proizvođač izvrši promjene na proizvodnom postrojenju i/ili proizvodnoj jedinici, uz suglasnost\nAgencije, a koje imaju utjecaja na korištenje proizvodnog postrojenja za koje je ishodio status povlaštenog proizvođača\n2. kada se vlasništvo, pravo građenja, pravo služnosti ili pravo korištenja proizvodnog postrojenja prenosi na drugu\nosobu i\n3. kada se proizvodno postrojenje gradi fazno ili etapno."
+      }
+    ]
+  }
+]
