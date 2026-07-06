@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="frontend/assets/novi_logo.jpeg" alt="ENERA logo" width="200">
+</p>
+
 # ENERA — Energetski Ekspert i RAG Asistent
 
 **ENERA** is a locally-executed, retrieval-augmented generation (RAG) assistant that answers domain-specific questions about Croatian renewable-energy regulation, technical standards, and funding programmes. Every answer is grounded in a curated set of authoritative documents and returned together with its sources, so each claim can be verified against the original text.
